@@ -478,7 +478,6 @@ function copyEmail(btn) {
   function openPopup() {
     backdrop.classList.add('popup-backdrop--visible');
     backdrop.removeAttribute('aria-hidden');
-    textarea.focus();
   }
   function closePopup() {
     backdrop.classList.remove('popup-backdrop--visible');
@@ -508,7 +507,6 @@ function copyEmail(btn) {
     var msg = textarea.value.trim();
     var valid = true;
     if (!email) { emailInput.classList.add('popup-input--error'); emailInput.focus(); valid = false; }
-    if (!msg) { textarea.classList.add('popup-textarea--error'); if (valid) textarea.focus(); valid = false; }
     if (!valid) return;
     fetch('https://formspree.io/f/xzdlaagv', {
       method: 'POST',
