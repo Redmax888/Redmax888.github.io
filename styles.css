@@ -804,11 +804,12 @@ body {
   padding: 10px 16px;
   border-radius: 6px;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
   z-index: 999;
 }
-.cs-copy-toast--visible { opacity: 1; }
+.cs-copy-toast--visible { opacity: 1; visibility: visible; }
 
 @media (max-width: 600px) {
   .popup-backdrop {
