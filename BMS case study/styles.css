@@ -222,7 +222,7 @@ body {
 }
 
 .cs-image-pair--hero-gap {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .cs-pair-img {
@@ -710,10 +710,14 @@ body {
   :root { --px: 10px; }
   .cs-intro { line-height: 26px; }
   .cs-sep { padding-top: 45px; }
+  .cs-section-inner--mb { margin-bottom: 34px; }
+  .cs-section[aria-labelledby="wf1-heading"] .cs-section-inner--mb,
+  .cs-section[aria-labelledby="saved-heading"] .cs-section-inner--mb { margin-bottom: 17px; }
   .cs-section[aria-labelledby="saved-heading"],
   .cs-section[aria-labelledby="system-heading"] { padding-top: 34px; }
   .cs-section[aria-labelledby="ai-heading"] { padding-top: 30px; }
   .cs-section[aria-labelledby="retro-heading"] { padding-top: 74px; }
+  .cs-section[aria-labelledby="problem-heading"] { padding-top: 0; }
   .popup-backdrop {
     align-items: flex-start;
     padding: 16px;
@@ -796,7 +800,7 @@ body {
   .cs-metric-group { flex: unset; width: 100%; }
   .cs-metric-val { font-size: 80px; line-height: 80px; }
   .cs-image-pair { flex-direction: column; gap: 16px; }
-  .cs-image-pair--hero-gap { margin-bottom: 48px; }
+  .cs-image-pair--hero-gap { margin-bottom: 16px; }
   .cs-shipped-row { flex-direction: column; gap: 32px; }
   .cs-ai-row { flex-direction: column; gap: 32px; }
   .cs-thumb { width: 160px; height: 160px; }
