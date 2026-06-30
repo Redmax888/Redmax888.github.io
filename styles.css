@@ -484,7 +484,7 @@ body {
     gap: 32px;
     width: 100%;
     border-top: 2px solid var(--rule);
-    padding: 25px 0;
+    padding: 16px 0;
   }
 
   /* Contact — border-top + border-bottom (Figma Frame 35) */
