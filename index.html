@@ -352,25 +352,31 @@
 
 <div class="popup-backdrop" id="letsTalkBackdrop" aria-hidden="true">
   <div class="popup" id="letsTalkPopup" role="dialog" aria-labelledby="popupTitle" aria-modal="false">
-    <div class="popup-inner">
-      <div class="popup-top">
-        <div class="popup-hgroup">
-          <div class="popup-header">
-            <button class="popup-close" id="popupClose" aria-label="Close">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L11 11M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </button>
-          </div>
-          <h2 class="popup-title" id="popupTitle">Let's talk</h2>
+    <div class="popup-top">
+      <div class="popup-hgroup">
+        <div class="popup-header">
+          <button class="popup-close" id="popupClose" aria-label="Close">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
         </div>
-        <p class="popup-body-text">Open to new roles, contracts, or just a chat about UX and designing for experts. I'll reply within a day.</p>
+        <h2 class="popup-title" id="popupTitle">Let's talk</h2>
       </div>
-      <div class="popup-bottom">
-        <input class="popup-input" id="popupEmail" type="email" placeholder="Your email…" autocomplete="email">
-        <textarea class="popup-textarea" id="popupTextarea" placeholder="Your message…"></textarea>
-        <button class="popup-send" id="popupSend">Send message</button>
+      <p class="popup-body-text">Open to new roles, contracts, or just a chat about UX and designing for experts. I'll reply within a day.</p>
+    </div>
+    <div class="popup-bottom">
+      <div class="popup-fields">
+        <div class="popup-field">
+          <label class="popup-label" for="popupEmail">Your email</label>
+          <input class="popup-input" id="popupEmail" type="email" autocomplete="email">
+        </div>
+        <div class="popup-field">
+          <label class="popup-label" for="popupTextarea">Message</label>
+          <textarea class="popup-textarea" id="popupTextarea"></textarea>
+        </div>
       </div>
+      <button class="popup-send" id="popupSend">Send message</button>
     </div>
   </div>
 </div>
@@ -394,6 +400,7 @@
     backdrop.setAttribute('aria-hidden', 'true');
     textarea.value = '';
     emailInput.value = '';
+    clearErrors();
   }
 
   document.querySelectorAll('[data-letstalk]').forEach(function(el) {
@@ -404,9 +411,20 @@
   closeBtn.addEventListener('click', closePopup);
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopup(); });
 
+  function clearErrors() {
+    emailInput.classList.remove('popup-input--error');
+    textarea.classList.remove('popup-textarea--error');
+  }
+  emailInput.addEventListener('input', function() { emailInput.classList.remove('popup-input--error'); });
+  textarea.addEventListener('input', function() { textarea.classList.remove('popup-textarea--error'); });
+
   sendBtn.addEventListener('click', function() {
+    var email = emailInput.value.trim();
     var msg = textarea.value.trim();
-    if (!msg) { textarea.focus(); return; }
+    var valid = true;
+    if (!email) { emailInput.classList.add('popup-input--error'); emailInput.focus(); valid = false; }
+    if (!msg) { textarea.classList.add('popup-textarea--error'); if (valid) textarea.focus(); valid = false; }
+    if (!valid) return;
     fetch('https://formspree.io/f/xzdlaagv', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
