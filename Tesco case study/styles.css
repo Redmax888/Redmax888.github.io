@@ -458,6 +458,7 @@ body {
 }
 
 @media (max-width: 600px) {
+  :root { --px: 10px; }
   .popup-backdrop {
     align-items: flex-start;
     padding: 16px;
