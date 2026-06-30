@@ -1,0 +1,765 @@
+/* ─── Canela font (for popup) ────────────────────────────── */
+@font-face {
+  font-family: 'Canela Text Trial';
+  src: url('assets/fonts/CanelaText-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: 'Public Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Token aliases ──────────────────────────────────────── */
+:root {
+  --serif: 'Canela Text', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
+  --sans:  'Public Sans', system-ui, sans-serif;
+  --ui:    'Inter', system-ui, sans-serif;
+
+  --black:   #000;
+  --body:    #333;
+  --muted:   #8D8D8D;
+  --rule:    #F2F2F2;
+  --tag-1:   #EDEDF0;
+  --tag-2:   #F5F5F5;
+
+  --max-content: 1400px;
+  --px: clamp(20px, 3.33vw, 48px);
+  --py: 40px;
+}
+
+/* ─── Page shell ─────────────────────────────────────────── */
+.page {
+  max-width: calc(var(--max-content) + var(--px) * 2);
+  margin: 0 auto;
+  padding: var(--py) var(--px) 16px;
+}
+
+/* ─── Hero ───────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100dvh;
+}
+
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: var(--max-content);
+}
+
+.hero-bio {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4.44vw, 64px);
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.hero-bio strong {
+  font-weight: 700;
+}
+
+/* Nav row */
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-top: 2px solid var(--rule);
+  border-bottom: 2px solid var(--rule);
+}
+
+.nav-specialisms {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.specialism {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.67vw, 24px);
+  line-height: 36px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.specialism svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-link {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.67vw, 24px);
+  line-height: 36px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  color: #444444;
+  outline: none;
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 61px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.scroll-hint:focus-visible { outline: 2px solid var(--muted); outline-offset: 4px; }
+
+.scroll-label {
+  font-family: var(--ui);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scroll-arrow {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrow { animation: none; }
+}
+
+/* ─── Works section ──────────────────────────────────────── */
+.works {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-top: 120px;
+}
+
+/* ─── Case study clickable overlay ──────────────────────── */
+.case-study {
+  position: relative;
+}
+.cs-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.cs-link-overlay:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+
+/* ─── Case study ─────────────────────────────────────────── */
+.case-study {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Screenshot area */
+.cs-visual {
+  width: 100%;
+  max-width: var(--max-content);
+  aspect-ratio: 1400 / 699;
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  image-rendering: -webkit-optimize-contrast; /* sharper upscaling in Safari/WebKit */
+  image-rendering: crisp-edges;
+}
+
+.cs-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.cs-visual .cs-phone-ui {
+  position: absolute;
+  left: calc(550 / 1400 * 100%);
+  top: calc(40 / 699 * 100%);
+  height: 88.4%;
+  width: auto;
+  object-fit: initial;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Text content */
+.cs-info {
+  width: 100%;
+  max-width: var(--max-content);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-heading {
+  display: block;
+}
+
+.cs-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.78vw, 40px);
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.badge-new {
+  display: inline-flex;
+  vertical-align: top;
+  margin-left: 10px;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.cs-tags {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 28px;
+  background-image: url('assets/tag-light.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--body);
+  white-space: nowrap;
+}
+
+.tag--primary { background-image: url('assets/tag-dark.svg'); }
+
+.cs-desc {
+  font-family: var(--ui);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--body);
+  max-width: 826px;
+}
+
+.cs-rule {
+  width: 100%;
+  max-width: var(--max-content);
+  height: 2px;
+  background: var(--rule);
+  border: none;
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+.footer {
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.footer-heading {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--black);
+  max-width: var(--max-content);
+}
+
+/* ─── All works grid ─────────────────────────────────────── */
+.all-works-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 32px;
+  max-width: var(--max-content);
+  margin-top: 24px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.work-thumb {
+  overflow: hidden;
+  flex-shrink: 0;
+  height: 160px;
+}
+
+.work-thumb--sm { width: 240px; }
+.work-thumb--md { width: 320px; }
+.work-thumb--xs { width: 160px; }
+
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.work-title {
+  font-family: var(--ui);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #2F80ED;
+}
+
+/* ─── Footer credit ──────────────────────────────────────── */
+.footer-credit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: var(--max-content);
+  margin-top: 120px;
+}
+
+.footer-avatar {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #E2E2E2;
+  border: 0.83px solid #000;
+}
+
+.footer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer-credit-info {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.footer-credit-info p + p {
+  margin-top: 10px;
+}
+
+.footer-credit-info a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-rule {
+  width: 100%;
+  max-width: var(--max-content);
+  height: 2px;
+  background: var(--rule);
+  border: none;
+  margin-top: 24px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+/* ── 900 px: hero nav wraps ── */
+@media (max-width: 900px) {
+  .hero-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .nav-specialisms { flex-wrap: wrap; gap: 20px; }
+}
+
+/* ── 768 px: tablet ── */
+@media (max-width: 768px) {
+  :root { --py: 24px; }
+
+  /* All-works: 2-column grid */
+  .all-works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 32px;
+  }
+  .work-thumb {
+    width: 100%;
+    height: 120px;
+  }
+  .work-thumb--sm,
+  .work-thumb--md,
+  .work-thumb--xs { width: 100%; }
+
+  /* Case visual: 2:1 matches Figma mobile (392×196) */
+  .cs-visual { aspect-ratio: 2 / 1; }
+}
+
+/* ── 600 px: mobile — Figma node 22556-6960 ──────────────────────────
+   Outer frame:   padding 0 10px  →  --px: 10px
+   Frame 4:       gap 48px between hero / cases / footer sections
+   Nav:           two rows, specialisms border-top / contact border-bottom
+   Case visuals:  full-bleed (392px) — bleed past the 10px page padding
+   Tags:          plain fills + border-radius, no SVG background shapes
+   Tesco phone:   centred, 78.8% height (x:159 = 50% centre, y:18 = 9.2%)
+   Footer credit: margin-top 120px (Figma Frame 35 padding-top: 120px)
+──────────────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  :root { --px: 10px; }
+
+  /* ── Hero ── */
+  .hero-bio { font-size: 34px; line-height: 48px; }
+
+  /* Nav: remove shared border; each child row owns its own */
+  .hero-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border: none;
+    padding: 0;
+  }
+
+  /* Specialisms — border-top (Figma Frame 19: strokeWeight 2px 0px) */
+  .nav-specialisms {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 100%;
+    border-top: 2px solid var(--rule);
+    padding: 25px 0;
+  }
+
+  /* Contact — border-top + border-bottom (Figma Frame 35) */
+  .nav-contact {
+    gap: 32px;
+    width: 100%;
+    border-top: 2px solid var(--rule);
+    border-bottom: 2px solid var(--rule);
+    padding: 25px 0;
+  }
+
+  /* Accent text: lock to 24px / 36px (clamp shrinks it otherwise) */
+  .specialism {
+    font-family: var(--ui);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+  .contact-link {
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  /* ── Case studies ── */
+
+  /* Visuals respect the 10px page gutter — not full-bleed on mobile */
+
+  /* Tesco phone: centred, Figma node 22556-7007 (150×309 in 392×196 frame) */
+  .cs-visual .cs-phone-ui {
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 14.8%;
+    width: 38.3%;
+    height: auto;
+  }
+
+  .case-study { align-items: stretch; gap: 24px; }
+
+  /* Title 2 mobile: 34px */
+  .cs-title { font-size: 34px; line-height: 48px; }
+
+  /* Tags: plain colour fills, rounded right corners, no SVG background */
+  .cs-tags { gap: 10px; }
+
+  .tag {
+    background-image: none;
+    background-color: var(--tag-2);
+    border-radius: 0 4px 0 4px;
+    padding: 0 10px;
+  }
+  .tag--primary {
+    background-image: none;
+    background-color: var(--tag-1);
+  }
+
+  /* ── Footer ── */
+  /* Avatar stays 120×120 (same as desktop — Figma Frame 1321319497: 120×120) */
+  .footer-credit {
+    gap: 16px;
+    margin-top: 120px;
+  }
+}
+
+/* ── 540 px: small mobile ── */
+@media (max-width: 540px) {
+  :root { --py: 20px; }
+
+  .hero { min-height: 100svh; }
+  .scroll-hint { bottom: 32px; }
+
+  /* 48px from hero to first case study (Frame 4 gap);
+     24px between cases (Frame 1321319660 gap: 24px) */
+  .works { gap: 48px; padding-top: 48px; }
+
+  /* 48px from last case study to "All design work" heading */
+  .footer { padding-top: 48px; }
+}
+
+/* ── 480 px: flex wrap, fixed-width cards (matches Figma 392px mobile) ── */
+@media (max-width: 480px) {
+  .all-works-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 32px;
+  }
+  .work-thumb--sm { width: 240px; }
+  .work-thumb--md { width: 320px; }
+  .work-thumb--xs { width: 160px; }
+  .work-thumb { height: 160px; }
+}
+
+/* ─── Sticky scroll bar ──────────────────────────────────── */
+.sticky-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.sticky-bar--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.sticky-bar-inner {
+  max-width: calc(1400px + clamp(20px, 3.33vw, 48px) * 2);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3.33vw, 48px);
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sticky-bar-name {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #8D8D8D;
+  text-decoration: none;
+}
+.sticky-bar-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.sticky-bar-link {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+.sticky-bar-link:hover { color: #444; }
+
+/* ─── Let's Talk popup ───────────────────────────────────── */
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.popup-backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup {
+  background: #fff;
+  box-shadow: 0px 4px 54px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  padding: 24px 32px 40px;
+  width: 524px;
+  max-width: calc(100vw - 32px);
+}
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.popup-hgroup {
+  display: flex;
+  flex-direction: column;
+}
+.popup-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 0 8px 0;
+}
+.popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  border-radius: 96px;
+  padding: 0;
+  cursor: pointer;
+  color: #8D8D8D;
+  transition: color 0.15s ease;
+}
+.popup-close:hover { color: #000; }
+.popup-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.popup-title {
+  font-family: 'Canela Text Trial', Georgia, serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  color: #000;
+  margin: 0;
+}
+.popup-body-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #333;
+  margin: 0;
+}
+.popup-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.popup-textarea {
+  width: 460px;
+  max-width: 100%;
+  height: 200px;
+  border: 1px solid #EDEDF0;
+  background: #fff;
+  padding: 16px;
+  resize: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.popup-textarea::placeholder { color: #8D8D8D; }
+.popup-textarea:focus { border-color: #8D8D8D; }
+.popup-send {
+  align-self: flex-start;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.popup-send:hover { background: #444; }
+
+.cs-copy-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: #000;
+  color: #fff;
+  font-family: var(--ui);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 10px 16px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 999;
+}
+.cs-copy-toast--visible { opacity: 1; }

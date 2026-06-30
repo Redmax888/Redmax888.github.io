@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMS, Smarter Binding — Maxim Latanovschii</title>
+  <meta name="description" content="Case study: Designing the Bind-Now platform that lets BMS launch a new digital insurance line in weeks instead of months.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Public+Sans:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="sticky-bar" id="stickyBar" aria-hidden="true">
+    <div class="sticky-bar-inner">
+      <a href="../index.html" class="sticky-bar-name">Maxim Latanovschii</a>
+      <div class="sticky-bar-links">
+        <a href="mailto:maximlats@gmail.com" class="sticky-bar-link" data-letstalk>Let's talk</a>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+
+    <!-- ══════════════════════════════════════
+         NAVIGATION
+    ══════════════════════════════════════ -->
+    <nav class="cs-nav" aria-label="Page navigation">
+      <a href="../index.html" class="cs-nav-identity">Maxim Latanovschii</a>
+      <div class="cs-nav-links">
+        <a href="https://www.linkedin.com/in/maxim-latanovschii/" class="cs-nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:maximlats@gmail.com" class="cs-nav-link" data-letstalk>Let's talk</a>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+
+      <div class="cs-hero-top">
+        <div class="cs-meta">
+          <span class="cs-meta-line" aria-hidden="true"></span>
+          <span class="cs-meta-text">Case study / 2026</span>
+        </div>
+        <div class="cs-hero-heading">
+          <h1 class="cs-title" id="cs-title">BMS, Smarter binding for brokers.<span class="badge-new" aria-label="New project"><svg width="50" height="44" viewBox="0 0 50 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 23.9365L10.0317 23.9365V39.9873C10.0317 42.2035 8.23518 44 6.01904 44L0 44V23.9365Z" fill="#B29A00"/><path d="M0 17.0417L46.191 0.229533C48.2735 -0.528435 49.9617 0.653655 49.9617 2.8698L49.9617 21.0688C49.9617 23.285 48.2735 25.696 46.191 26.4539L0 43.2661L0 17.0417Z" fill="#FFE747"/><path d="M7.19731 32.5287V32.4926C7.53668 31.3759 7.72333 30.4954 7.72333 28.7439V27.0284C7.72333 25.4936 7.43487 24.7318 6.6713 24.143V24.1069L10.4043 21.6467V23.5608L10.4891 23.5479C10.9642 22.5444 12.0163 21.1503 13.5943 20.5759C15.2232 19.983 16.2583 20.6356 16.2583 22.2788V25.6374C16.2583 27.3528 16.411 28.1459 16.7504 29.0155V29.0516L13.0004 30.4165V30.3804C13.3398 29.2637 13.4925 28.3414 13.4925 26.6802V23.7007C13.4925 22.9243 13.1192 22.4823 12.2199 22.8096C11.4903 23.0752 10.8624 23.701 10.4891 24.3966V27.7552C10.4891 29.4346 10.6418 30.2457 10.9642 31.1215V31.1576L7.19731 32.5287ZM23.6121 24.604C24.5963 24.2458 25.2411 23.6861 25.801 22.9225L26.0046 22.9929C25.4956 24.9477 24.1551 26.6455 22.1189 27.3866C19.4889 28.3438 17.8769 26.8901 17.8769 24.1454C17.8769 21.1299 19.7773 18.3255 22.2716 17.4176C24.7999 16.4974 26.1064 18.261 26.0216 20.4767L20.7106 22.4098C20.8972 24.7435 22.085 25.1598 23.6121 24.604ZM22.2377 18.1342C21.2875 18.4801 20.6936 20.1047 20.6936 21.6756L23.3576 20.6338V19.9115C23.3576 18.3766 22.9164 17.8872 22.2377 18.1342ZM38.8861 14.6027L36.4427 22.0106L35.4755 22.3627L33.2696 17.008L30.9111 24.024L29.9269 24.3822L27.6362 18.6792C27.0423 17.2161 26.7369 16.6953 26.2788 16.3022V16.2481L30.5887 14.6794V14.7336C30.2154 15.357 30.1305 16.5435 30.5378 17.569L31.5559 20.1959L32.9133 16.1627C32.4212 14.9694 32.2007 14.5622 31.8274 14.2827V14.2285L36.0524 12.6907V12.7449C35.73 13.2956 35.6112 14.5487 36.0185 15.5742L37.0875 18.1465L38.0377 15.2546C38.6316 13.4855 38.2413 12.3816 37.7492 12.1273V12.0732L40.515 11.0665V11.1207C39.8872 12.0714 39.5139 12.749 38.8861 14.6027Z" fill="black"/></svg></span></h1>
+        </div>
+      </div>
+
+      <div class="cs-hero-bottom">
+        <p class="cs-intro">
+          Bind-Now: the platform that lets BMS launch new digital insurance lines in weeks instead of months. Here's how I approached the design.
+        </p>
+        <ul class="cs-tags" aria-label="Project categories">
+          <li class="tag tag--primary">Insurance</li>
+          <li class="tag">Product design</li>
+          <li class="tag">Configurable system</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PRODUCT VISUAL — hero image
+    ══════════════════════════════════════ -->
+    <div class="cs-product-visual" aria-label="Bind Now product dashboard">
+      <img
+        class="cs-product-visual-img"
+        src="assets/cs-bms-hero.png"
+        srcset="assets/cs-bms-hero.png 1x, assets/cs-bms-hero_2x.png 2x"
+        alt="Bind Now insurance platform — Pacific Rim Administration Services dashboard"
+      >
+    </div>
+
+    <div class="cs-image-pair cs-image-pair--hero-gap">
+      <img
+        class="cs-pair-img"
+        src="assets/cs-bms-mobile.png"
+        srcset="assets/cs-bms-mobile.png 1x, assets/cs-bms-mobile_2x.png 2x"
+        alt="Mobile Quotes &amp; policies view"
+      >
+      <img
+        class="cs-pair-img"
+        src="assets/cs-bms-client-card.png"
+        srcset="assets/cs-bms-client-card.png 1x, assets/cs-bms-client-card_2x.png 2x"
+        alt="Client account card — The Benefits Trust SL"
+      >
+    </div>
+
+    <!-- ══════════════════════════════════════
+         PROJECT DETAILS
+    ══════════════════════════════════════ -->
+    <div class="cs-project-details" aria-label="Project information">
+      <p class="cs-project-text">
+        Role: Lead UX/UI Designer<br>
+        Company: BMS<br>
+        Team: 1 BA, 3 Devs, 1 Tester<br>
+        Timeline: 18 months across 6 lines of business (LOB), 5 months MVP through 1st LOB<br>
+        Status: Live across 6 insurance product lines
+      </p>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         OUTCOME
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-outcome" aria-labelledby="outcome-heading">
+
+      <div class="cs-section-inner">
+
+        <div class="cs-label">Outcome</div>
+
+        <h2 class="cs-h2" id="outcome-heading">
+          From emails and spreadsheets to one configurable platform
+        </h2>
+
+        <div class="cs-body">
+          <p>When I joined BMS, most insurance lines were still quoted in spreadsheets
+          and email chains. The legacy Quote &amp; Bind tool supported one product and
+          took months of engineering to extend to another.</p>
+          <p>I led the redesign of Bind-Now, a configurable platform now live across six
+          insurance products. The Fund D&amp;O instance quotes coverage from $1M to $10M
+          in minutes, with policy documents issued automatically on bind.</p>
+        </div>
+
+      </div>
+
+      <div class="cs-quote-block">
+        <blockquote class="cs-blockquote">
+          "BMS' Bind-Now portal has transformed the way we manage Fund Directors'
+          and Officers' Liability coverage, streamlining what was traditionally a manual
+          and time-consuming process into a fully automated solution."
+        </blockquote>
+        <p class="cs-attribution">
+          <strong>Tom Spraggs</strong>
+          Director &amp; Head of Financial Institutions UK Retail, BMS
+        </p>
+      </div>
+
+      <div class="cs-metrics" aria-label="Key outcomes">
+        <div class="cs-metric">
+          <div class="cs-metric-num"><span class="cs-metric-val">6</span><span class="cs-metric-unit">lines</span></div>
+          <p class="cs-metric-label">of business instances now live on Bind-Now.</p>
+        </div>
+        <div class="cs-metric-group">
+          <div class="cs-metric-divider" aria-hidden="true"></div>
+          <div class="cs-metric">
+            <div class="cs-metric-num"><span class="cs-metric-val">40</span><span class="cs-metric-unit">hrs</span></div>
+            <p class="cs-metric-label">average brief-to-publish, down from 20 days at baseline.</p>
+          </div>
+        </div>
+        <div class="cs-metric-group">
+          <div class="cs-metric-divider" aria-hidden="true"></div>
+          <div class="cs-metric">
+            <div class="cs-metric-num"><span class="cs-metric-val">5</span><span class="cs-metric-unit">months</span></div>
+            <p class="cs-metric-label">from kickoff to MVP launch on the first line of business.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         THE PROBLEM
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="problem-heading">
+
+      <div class="cs-section-inner cs-section-inner--mb">
+
+        <div class="cs-label">The problem</div>
+
+        <h2 class="cs-h2" id="problem-heading">
+          The old quoting tools were patched together over the years
+        </h2>
+
+        <div class="cs-body">
+          <p>A broker at BMS handles dozens of quotes a day, but the legacy system only supported one product line. Everything else lived in Excel, email, and underwriter phone calls, pricing took hours or days.</p>
+          <p>The structural problem was bigger. Every new digital line meant months of engineering, so most lines never got digitised. The real cost wasn't slow quotes. It was a ceiling on growth.</p>
+        </div>
+
+      </div>
+
+      <div class="cs-full-img">
+        <img
+          src="assets/cs-bms-problem.jpg"
+          srcset="assets/cs-bms-problem.jpg 1x, assets/cs-bms-problem_2x.jpg 2x"
+          alt="Legacy tools: Outlook email, CRM form, and Excel spreadsheet showing the manual insurance quoting process"
+        >
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         THE BET
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="bet-heading">
+
+      <div class="cs-section-inner cs-section-inner--mb">
+
+        <div class="cs-label">The bet</div>
+
+        <h2 class="cs-h2" id="bet-heading">Designing for configurability</h2>
+
+      </div>
+
+      <div class="cs-full-img cs-full-img--mb">
+        <img
+          src="assets/cs-bms-diagram.png"
+          srcset="assets/cs-bms-diagram.png 1x, assets/cs-bms-diagram_2x.png 2x"
+          alt="Discovery whiteboard and synthesis showing the configurable shell structure across product lines"
+        >
+      </div>
+
+      <div class="cs-section-inner">
+
+        <p class="cs-caption">
+          The obvious move was a polished redesign of the single-product tool.
+          The bet I made was a configurable shell any line could be poured into.
+          Harder than designing for one defined product, but if it worked, BMS
+          could spin up new digital lines in weeks, not quarters.
+        </p>
+
+        <p class="cs-body">
+          Discovery surfaced one loud pattern. Every line of business had its own
+          questions, pricing, and documents, but the shape of the work was almost
+          identical: gather information, calculate premium or refer, present terms,
+          bind, issue documents.
+        </p>
+
+        <div class="cs-h3-group">
+          <h3 class="cs-h3">Synthesis</h3>
+          <p class="cs-body">
+            Two workflow patterns came out of the research: a standard self-serve
+            flow for repeat brokers, and an open-market flow for London Market panels.
+            Every line of business would be configured into one of them.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WORKFLOW 1 — STANDARD QUOTATION
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="wf1-heading">
+
+      <div class="cs-section-inner cs-section-inner--mb">
+
+        <div class="cs-label">Self-serve flow</div>
+
+        <h2 class="cs-h2" id="wf1-heading">Standard quotation</h2>
+
+        <p class="cs-body">
+          The self-serve flow, for brokers quoting the same product dozens of
+          times a week.
+        </p>
+
+        <div class="cs-h3-group">
+          <h3 class="cs-h3">Density over hand-holding.</h3>
+          <p class="cs-body">
+            Insurance UX defaults to wizards: friendly for first-timers, painful
+            for power users. Brokers didn't want to feel guided; they wanted to fly.
+            So I built a single dense screen with smart defaults and progressive
+            disclosure, keeping interrelated questions together so they can complete
+            the form as fast as possible.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="cs-full-img cs-full-video">
+        <video
+          id="wf1-video"
+          src="assets/quotation-form-loop.mp4"
+          muted
+          playsinline
+          preload="auto"
+          aria-label="Quote details form — the dense single-screen quotation workflow for brokers"
+        ></video>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SAVED QUOTES
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="saved-heading">
+
+      <div class="cs-section-inner cs-section-inner--mb">
+
+        <div class="cs-h3-group">
+          <h3 class="cs-h3" id="saved-heading">Saved quotes: a table, not cards.</h3>
+          <p class="cs-body">
+            Brokers refer back to their own and colleagues' quotes constantly. I
+            tested a card grid, a hybrid layout, and a data table with side-panel
+            filters. The table won. Brokers process saved quotes as data, not objects.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="cs-image-pair">
+        <img
+          class="cs-pair-img"
+          src="assets/cs-bms-quotes-table.png"
+          srcset="assets/cs-bms-quotes-table.png 1x, assets/cs-bms-quotes-table_2x.png 2x"
+          alt="Quotes and policies table with status filter panel open"
+        >
+        <img
+          class="cs-pair-img"
+          src="assets/cs-bms-design-system.png"
+          srcset="assets/cs-bms-design-system.png 1x, assets/cs-bms-design-system_2x.png 2x"
+          alt="Tag component configurator from the BMS design system"
+        >
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WORKFLOW 2 — OPEN MARKET QUOTATION
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="wf2-heading">
+
+      <div class="cs-section-inner cs-section-inner--mb">
+
+        <div class="cs-label">Open-market flow</div>
+
+        <h2 class="cs-h2" id="wf2-heading">Synchronised open market quotation</h2>
+
+        <p class="cs-body">
+          The harder problem. London Market policies have a panel of underwriters, not one. They bid
+          on slices of the same risk, minutes or days apart. The flow had to
+          coordinate them without becoming a chat app.
+        </p>
+
+        <div class="cs-h3-group">
+          <h3 class="cs-h3">Explicit and asynchronous.</h3>
+          <p class="cs-body">
+            Each underwriter sees the risk, their capacity, and what others have
+            committed to. They don't see each other in real time. That avoided the
+            chaos of live bidding and the staleness of email chains.
+          </p>
+        </div>
+
+        <div class="cs-h3-group cs-h3-group--flush">
+          <h3 class="cs-h3">Where I pushed back on the brief</h3>
+          <p class="cs-body">
+            The initial plan was to ship a broker UI while keeping underwriter
+            coordination in email. I argued that would only recreate the legacy
+            process behind a better broker form. Instead, we built two synchronised
+            UIs for brokers and underwriters, updating in real time. That's what
+            shipped.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="cs-quote-block cs-wf2-testimonial">
+        <blockquote class="cs-blockquote">
+          "The portal has been successfully delivered to several clients,
+          optimising their working practices and systems… having the BMS Tech /
+          IT team's support certainly helps us deliver on client expectations and
+          provides us with a competitive advantage over our peers."
+        </blockquote>
+        <p class="cs-attribution">
+          <strong>Harry Leonard</strong>
+          Divisional Director, North American Direct &amp; Facultative (Cargo), BMS
+        </p>
+      </div>
+
+      <div class="cs-full-img cs-full-img--mb" aria-label="Open market quotation — Line to sign">
+        <img
+          src="assets/cs-bms-wf2.png"
+          srcset="assets/cs-bms-wf2.png 1x, assets/cs-bms-wf2_2x.png 2x"
+          alt="Line to sign — broker interface showing underwriter responses with offered lines"
+        >
+      </div>
+
+      <div class="cs-image-pair">
+        <img
+          class="cs-pair-img"
+          src="assets/cs-bms-wf2-pair1.png"
+          srcset="assets/cs-bms-wf2-pair1.png 1x, assets/cs-bms-wf2-pair1_2x.png 2x"
+          alt="Set written line — underwriter response view"
+        >
+        <img
+          class="cs-pair-img"
+          src="assets/cs-bms-wf2-pair2.png"
+          srcset="assets/cs-bms-wf2-pair2.png 1x, assets/cs-bms-wf2-pair2_2x.png 2x"
+          alt="Policy signed — confirmation screen for Policy #2026-00088"
+        >
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         MULTIPLIER — CONFIGURABLE DESIGN SYSTEM
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="system-heading">
+
+      <div class="cs-section-inner cs-section-inner--mb">
+
+        <div class="cs-label">Multiplier for scale</div>
+
+        <h2 class="cs-h2" id="system-heading">Configurable design system</h2>
+
+        <p class="cs-body">
+          This is the part I'm proudest of. It's what made everything else compound.
+          Every new line needs its own questions, rules, pricing handoffs, and
+          documents. Traditional answer: developers code each line. Bind-Now answer:
+          an admin builds a quotation flow seamlessly, like a web constructor.
+        </p>
+
+        <p class="cs-body">
+          For that to produce a consistently good experience, the constructor
+          couldn't be free-form. I established UX principles for quotation journeys
+          that the tool enforces, alongside an extensive design library and design
+          system that I built and maintained alone over 18 months.
+        </p>
+
+      </div>
+
+      <div class="cs-full-img" aria-label="BMS design system and component library">
+        <img
+          src="assets/cs-bms-final.png"
+          srcset="assets/cs-bms-final.png 1x, assets/cs-bms-final_2x.png 2x"
+          alt="BMS design principles cards and component inspector showing the configurable design system"
+        >
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WHAT SHIPPED
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="shipped-heading">
+
+      <div class="cs-shipped-row">
+
+        <div class="cs-section-inner">
+
+          <h2 class="cs-h2" id="shipped-heading">What shipped, in numbers</h2>
+
+          <ul class="cs-shipped-list">
+            <li>6 lines of business live on the Bind-Now platform,</li>
+            <li>1 Component library,</li>
+            <li>2 production workflows,</li>
+            <li>Ability to configure new business lines in weeks, not quarters,</li>
+            <li>Core UX principles, to guide developers when creating additional flows.</li>
+          </ul>
+
+        </div>
+
+        <img
+          class="cs-thumb"
+          src="assets/cs-bms-thumb1.png"
+          srcset="assets/cs-bms-thumb1.png 1x, assets/cs-bms-thumb1_2x.png 2x"
+          alt=""
+          aria-hidden="true"
+        >
+
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         AI IN MY PROCESS
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="ai-heading">
+
+      <div class="cs-ai-row">
+
+        <img
+          class="cs-thumb cs-thumb--lg"
+          src="assets/cs-bms-thumb2.png"
+          srcset="assets/cs-bms-thumb2.png 1x, assets/cs-bms-thumb2_2x.png 2x"
+          alt=""
+          aria-hidden="true"
+        >
+
+        <div class="cs-section-inner">
+
+          <h2 class="cs-h2" id="ai-heading">AI in my process</h2>
+
+          <p class="cs-body-accent">
+            AI isn't great at user research, taste, or big strategic decisions, but
+            it's excellent as a tireless second pair of eyes. My approach is simple:
+            AI helps me test and validate decisions I've already made, not make them
+            for me. It works best when you already know what good looks like.
+          </p>
+
+          <ul class="cs-ai-list">
+            <li>
+              Responsive prototyping.<br>
+              Late in a design phase, I use Claude to generate clickable prototypes. Not for user testing. To pressure-test responsive behaviour myself. Hand-coding is too slow for "where does this layout break first?" A couple of Bind-Now's layout decisions changed because of what I caught at that stage.
+            </li>
+            <li>
+              Validating against design principles.<br>
+              BMS has core UX principles every screen is held to. I run designs through Claude with those principles in context to catch where I'm drifting. Not a replacement for human critique. A fast first pass, so human reviews focus on the harder calls.
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WHAT I'D DO DIFFERENTLY
+    ══════════════════════════════════════ -->
+    <section class="cs-section cs-sep" aria-labelledby="retro-heading">
+
+      <div class="cs-section-inner">
+
+        <div class="cs-label">Retrospective</div>
+
+        <h2 class="cs-h2" id="retro-heading">What I'd do differently</h2>
+
+        <ul class="cs-ai-list">
+          <li>
+            The power-user dashboard started too late.<br>
+            Once five lines were live, brokers managing portfolios across products needed a holistic view. I had it in the roadmap from day one. I should have shipped a minimal version with the third LOB, not after the fifth. Power users patched the gap with spreadsheets. Exactly the problem we'd just solved.
+          </li>
+          <li>
+            I framed the configurability bet wrong at first.<br>
+            I sold it as "good design practice" when it was actually a strategic trade: three months of slower MVP for eighteen months of faster line launches. Once I framed it that way, leadership engaged differently and held the line under pressure to ship.
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════ -->
+    <footer class="cs-footer" aria-label="Footer">
+
+      <p class="cs-footer-line">
+        More of my work →
+        <a href="../index.html">Portfolio</a>
+      </p>
+      <p class="cs-footer-line">
+        Want to talk insurance UX, configurability, or designing for experts →
+        <button class="cs-copy-email" onclick="copyEmail(this)" type="button">maximlats@gmail.com</button>
+      </p>
+
+      <div class="cs-copy-toast" aria-live="polite" aria-atomic="true">Email address copied</div>
+
+      <div class="cs-footer-credit">
+        <div class="cs-footer-credit-info">
+          <p>Maxim Latanovschii</p>
+          <p>London, UK · <a href="mailto:maximlats@gmail.com">maximlats@gmail.com</a><br>© 2026, designed and coded by me</p>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var v = document.getElementById('wf1-video');
+      if (!v) return;
+      v.addEventListener('canplay', function handler() {
+        v.removeEventListener('canplay', handler);
+        setTimeout(function () { v.play(); }, 1000);
+      });
+      v.addEventListener('ended', function () {
+        setTimeout(function () { v.currentTime = 0; v.play(); }, 3000);
+      });
+    })();
+  </script>
+
+<script>
+function copyEmail(btn) {
+  navigator.clipboard.writeText('maximlats@gmail.com').then(function() {
+    var toast = document.querySelector('.cs-copy-toast');
+    toast.classList.add('cs-copy-toast--visible');
+    setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
+  });
+}
+</script>
+<script>
+(function() {
+  var bar = document.getElementById('stickyBar');
+  if (!bar) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 80) {
+      bar.classList.add('sticky-bar--visible');
+      bar.removeAttribute('aria-hidden');
+    } else {
+      bar.classList.remove('sticky-bar--visible');
+      bar.setAttribute('aria-hidden', 'true');
+    }
+  }, { passive: true });
+})();
+</script>
+
+<!-- ══ LET'S TALK POPUP ══ -->
+<div class="cs-copy-toast" id="sentToast" aria-live="polite" aria-atomic="true">Message sent. I'll reply soon.</div>
+
+<div class="popup-backdrop" id="letsTalkBackdrop" aria-hidden="true">
+  <div class="popup" id="letsTalkPopup" role="dialog" aria-labelledby="popupTitle" aria-modal="false">
+    <div class="popup-inner">
+      <div class="popup-top">
+        <div class="popup-hgroup">
+          <div class="popup-header">
+            <button class="popup-close" id="popupClose" aria-label="Close">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L11 11M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <h2 class="popup-title" id="popupTitle">Let's talk</h2>
+        </div>
+        <p class="popup-body-text">Open to new roles, contracts, or just a chat about UX and designing for experts. I'll reply within a day.</p>
+      </div>
+      <div class="popup-bottom">
+        <textarea class="popup-textarea" id="popupTextarea" placeholder="Your message…"></textarea>
+        <button class="popup-send" id="popupSend">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var backdrop = document.getElementById('letsTalkBackdrop');
+  var closeBtn = document.getElementById('popupClose');
+  var sendBtn  = document.getElementById('popupSend');
+  var textarea = document.getElementById('popupTextarea');
+
+  function openPopup() {
+    backdrop.classList.add('popup-backdrop--visible');
+    backdrop.removeAttribute('aria-hidden');
+    textarea.focus();
+  }
+  function closePopup() {
+    backdrop.classList.remove('popup-backdrop--visible');
+    backdrop.setAttribute('aria-hidden', 'true');
+    textarea.value = '';
+  }
+
+  document.querySelectorAll('[data-letstalk]').forEach(function(el) {
+    el.addEventListener('click', function(e) { e.preventDefault(); openPopup(); });
+  });
+
+  backdrop.addEventListener('click', function(e) { if (e.target === backdrop) closePopup(); });
+  closeBtn.addEventListener('click', closePopup);
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopup(); });
+
+  sendBtn.addEventListener('click', function() {
+    var msg = textarea.value.trim();
+    if (!msg) { textarea.focus(); return; }
+    window.location.href = 'mailto:maximlats@gmail.com?subject=Let%27s%20talk&body=' + encodeURIComponent(msg);
+    closePopup();
+    var toast = document.getElementById('sentToast');
+    toast.classList.add('cs-copy-toast--visible');
+    setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
+  });
+})();
+</script>
+</body>
+</html>
