@@ -466,7 +466,7 @@ body {
   :root { --px: 10px; }
 
   /* ── Hero ── */
-  .hero-bio { font-size: 34px; line-height: 48px; }
+  .hero-bio { font-size: 34px; line-height: 38px; }
 
   /* Nav: remove shared border; each child row owns its own */
   .hero-nav {
@@ -500,13 +500,13 @@ body {
   .specialism {
     font-family: var(--ui);
     font-size: 14px;
-    line-height: 21px;
+    line-height: 17px;
     font-weight: 400;
     color: #000000;
   }
   .contact-link {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 29px;
     color: #000000;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -530,7 +530,8 @@ body {
   .case-study { align-items: stretch; gap: 24px; }
 
   /* Title 2 mobile: 34px */
-  .cs-title { font-size: 34px; line-height: 48px; }
+  .cs-title { font-size: 34px; line-height: 38px; }
+  .cs-desc { line-height: 24px; }
 
   /* Tags: plain colour fills, rounded right corners, no SVG background */
   .cs-tags { gap: 10px; }
