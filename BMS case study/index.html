@@ -69,12 +69,15 @@
          PRODUCT VISUAL — hero image
     ══════════════════════════════════════ -->
     <div class="cs-product-visual" aria-label="Bind Now product dashboard">
-      <img
-        class="cs-product-visual-img"
-        src="assets/cs-bms-hero.png"
-        srcset="assets/cs-bms-hero.png 1x, assets/cs-bms-hero_2x.png 2x"
-        alt="Bind Now insurance platform — Pacific Rim Administration Services dashboard"
-      >
+      <picture>
+        <source media="(max-width: 600px)" srcset="assets/cs-bms-hero-mobile.png">
+        <img
+          class="cs-product-visual-img"
+          src="assets/cs-bms-hero.png"
+          srcset="assets/cs-bms-hero.png 1x, assets/cs-bms-hero_2x.png 2x"
+          alt="Bind Now insurance platform — Pacific Rim Administration Services dashboard"
+        >
+      </picture>
     </div>
 
     <div class="cs-image-pair cs-image-pair--hero-gap">
