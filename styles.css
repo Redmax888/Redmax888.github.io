@@ -558,8 +558,17 @@ body {
 @media (max-width: 540px) {
   :root { --py: 20px; }
 
-  .hero { min-height: 100svh; }
-  .scroll-hint { bottom: 32px; }
+  .hero { min-height: 100svh; display: flex; flex-direction: column; }
+  .scroll-hint {
+    position: static;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    align-self: center;
+    margin-top: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   /* 48px from hero to first case study (Frame 4 gap);
      24px between cases (Frame 1321319660 gap: 24px) */
