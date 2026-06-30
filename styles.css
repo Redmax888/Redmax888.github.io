@@ -505,8 +505,9 @@ body {
     color: #000000;
   }
   .contact-link {
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
     color: #000000;
     text-decoration: underline;
     text-decoration-thickness: 1px;
