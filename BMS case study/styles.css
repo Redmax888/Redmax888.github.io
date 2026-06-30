@@ -708,6 +708,7 @@ body {
 
 @media (max-width: 600px) {
   :root { --px: 10px; }
+  .cs-intro { line-height: 26px; }
   .popup-backdrop {
     align-items: flex-start;
     padding: 16px;
