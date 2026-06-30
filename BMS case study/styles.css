@@ -782,6 +782,7 @@ body {
 @media (max-width: 720px) {
   .cs-title { font-size: 34px; line-height: 48px; }
   .cs-blockquote { font-size: 28px; line-height: 1.35; }
+  .cs-full-img--mb { margin-bottom: 16px; }
 
   .cs-tags { gap: 10px; }
   .tag {
