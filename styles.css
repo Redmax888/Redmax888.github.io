@@ -718,7 +718,7 @@ body {
 .popup-field {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 .popup-label {
   font-family: 'Inter', system-ui, sans-serif;
