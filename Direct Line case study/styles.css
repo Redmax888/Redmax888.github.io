@@ -33,6 +33,8 @@ body {
   font-family: 'Public Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* ─── Tokens ─────────────────────────────────────────────── */
