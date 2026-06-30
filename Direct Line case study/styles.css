@@ -649,3 +649,21 @@ body {
   transition: background 0.15s ease;
 }
 .popup-send:hover { background: #444; }
+
+@media (max-width: 600px) {
+  .popup-backdrop {
+    align-items: flex-start;
+    padding: 16px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .popup {
+    width: 100%;
+    max-height: none;
+    padding: 16px 20px 24px;
+  }
+  .popup-send {
+    width: 100%;
+    text-align: center;
+  }
+}
