@@ -489,11 +489,22 @@ function copyEmail(btn) {
   sendBtn.addEventListener('click', function() {
     var msg = textarea.value.trim();
     if (!msg) { textarea.focus(); return; }
-    window.location.href = 'mailto:maximlats@gmail.com?subject=Let%27s%20talk&body=' + encodeURIComponent(msg);
-    closePopup();
-    var toast = document.getElementById('sentToast');
-    toast.classList.add('cs-copy-toast--visible');
-    setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
+    fetch('https://formspree.io/f/xzdlaagv', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ message: msg })
+    }).then(function(r) {
+      if (r.ok) {
+        closePopup();
+        var toast = document.getElementById('sentToast');
+        toast.classList.add('cs-copy-toast--visible');
+        setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(function() {
+      alert('Something went wrong. Please try again.');
+    });
   });
 })();
 </script>
