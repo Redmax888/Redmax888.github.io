@@ -929,6 +929,21 @@ body {
   outline: none;
   transition: border-color 0.15s ease;
 }
+.popup-input {
+  width: 460px;
+  max-width: 100%;
+  border: 1px solid #EDEDF0;
+  background: #fff;
+  padding: 16px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.popup-input::placeholder { color: #8D8D8D; }
+.popup-input:focus { border-color: #8D8D8D; }
 .popup-textarea::placeholder { color: #8D8D8D; }
 .popup-textarea:focus { border-color: #8D8D8D; }
 .popup-send {

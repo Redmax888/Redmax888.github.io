@@ -259,6 +259,7 @@
         <p class="popup-body-text">Open to new roles, contracts, or just a chat about UX and designing for experts. I'll reply within a day.</p>
       </div>
       <div class="popup-bottom">
+        <input class="popup-input" id="popupEmail" type="email" placeholder="Your email…" autocomplete="email">
         <textarea class="popup-textarea" id="popupTextarea" placeholder="Your message…"></textarea>
         <button class="popup-send" id="popupSend">Send message</button>
       </div>
@@ -272,6 +273,7 @@
   var closeBtn = document.getElementById('popupClose');
   var sendBtn  = document.getElementById('popupSend');
   var textarea = document.getElementById('popupTextarea');
+  var emailInput = document.getElementById('popupEmail');
 
   function openPopup() {
     backdrop.classList.add('popup-backdrop--visible');
@@ -282,6 +284,7 @@
     backdrop.classList.remove('popup-backdrop--visible');
     backdrop.setAttribute('aria-hidden', 'true');
     textarea.value = '';
+    emailInput.value = '';
   }
 
   document.querySelectorAll('[data-letstalk]').forEach(function(el) {
@@ -298,7 +301,7 @@
     fetch('https://formspree.io/f/xzdlaagv', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ message: msg })
+      body: JSON.stringify({ email: emailInput.value.trim(), message: msg })
     }).then(function(r) {
       if (r.ok) {
         closePopup();
