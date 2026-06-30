@@ -428,7 +428,7 @@ body {
     align-items: flex-start;
     gap: 20px;
   }
-  .nav-specialisms { flex-wrap: wrap; gap: 20px; }
+  .nav-specialisms { flex-wrap: wrap; gap: 16px; }
 }
 
 /* ── 768 px: tablet ── */
