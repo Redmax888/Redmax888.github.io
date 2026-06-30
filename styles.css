@@ -531,7 +531,7 @@ body {
 
   /* Title 2 mobile: 34px */
   .cs-title { font-size: 34px; line-height: 38px; }
-  .cs-desc { line-height: 21px; }
+  .cs-desc { line-height: 24px; }
 
   /* Tags: plain colour fills, rounded right corners, no SVG background */
   .cs-tags { gap: 10px; }
