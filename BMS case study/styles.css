@@ -709,6 +709,11 @@ body {
 @media (max-width: 600px) {
   :root { --px: 10px; }
   .cs-intro { line-height: 26px; }
+  .cs-sep { padding-top: 45px; }
+  .cs-section[aria-labelledby="saved-heading"],
+  .cs-section[aria-labelledby="system-heading"] { padding-top: 34px; }
+  .cs-section[aria-labelledby="ai-heading"] { padding-top: 30px; }
+  .cs-section[aria-labelledby="retro-heading"] { padding-top: 74px; }
   .popup-backdrop {
     align-items: flex-start;
     padding: 16px;
