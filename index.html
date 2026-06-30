@@ -346,6 +346,16 @@
       }
     }, { threshold: 0 }).observe(heroNav);
   }
+
+  var scrollHint = document.querySelector('.scroll-hint');
+  if (scrollHint) {
+    scrollHint.style.opacity = '0';
+    new IntersectionObserver(function(entries) {
+      var visible = entries[0].isIntersecting;
+      scrollHint.style.opacity = visible ? '1' : '0';
+      scrollHint.style.pointerEvents = visible ? '' : 'none';
+    }, { threshold: 1.0 }).observe(scrollHint);
+  }
 })();
 </script>
 
