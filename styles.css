@@ -508,7 +508,7 @@ body {
   :root { --px: 10px; }
 
   /* ── Hero ── */
-  .hero-bio { font-size: 34px; line-height: 48px; }
+  .hero-bio { font-size: 26px; line-height: 36px; }
 
   /* Nav: remove shared border; each child row owns its own */
   .hero-nav {
