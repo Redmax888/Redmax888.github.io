@@ -163,6 +163,25 @@ body {
 }
 .tag--primary { background-image: url('assets/tag-dark.svg'); }
 
+/* ─── Project meta (approach + team caption) ────────────── */
+.cs-project-details {
+  max-width: var(--max);
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-project-text {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--body);
+}
+
 /* ─── Section label ──────────────────────────────────────── */
 .cs-label {
   display: flex;
