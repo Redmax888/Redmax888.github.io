@@ -549,6 +549,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .sticky-bar-inner { padding: 0 10px; }
+}
 .sticky-bar-name {
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 14px;
