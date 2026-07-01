@@ -141,7 +141,7 @@ body {
   align-items: center;
   gap: 24px;
   text-decoration: none;
-  color: #000000;
+  color: #B2B2B2;
   transition: opacity 0.3s ease;
 }
 
@@ -152,7 +152,7 @@ body {
   font-size: 18px;
   font-weight: 500;
   line-height: 30px;
-  color: #000000;
+  color: #B2B2B2;
   text-align: center;
   white-space: nowrap;
 }
