@@ -140,13 +140,13 @@ body {
   color: var(--black);
 }
 
-.cs-hero-sub {
+.cs-hero-bottom {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.cs-subtitle {
+.cs-intro {
   font-family: var(--sans);
   font-size: clamp(18px, 1.71vw, 24px);
   line-height: 36px;
