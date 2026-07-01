@@ -709,6 +709,7 @@ body {
 }
 
 @media (max-width: 600px) {
+  .sticky-bar-inner { padding: 0 10px; }
   :root { --px: 10px; }
   .cs-intro { line-height: 26px; }
   .cs-sep { padding-top: 45px; }

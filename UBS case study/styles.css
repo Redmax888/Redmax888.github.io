@@ -542,6 +542,7 @@ body {
 }
 
 @media (max-width: 600px) {
+  .sticky-bar-inner { padding: 0 10px; }
   :root { --px: 10px; }
   .cs-nav { margin-bottom: 32px; }
   .popup-backdrop {

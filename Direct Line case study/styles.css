@@ -673,6 +673,7 @@ body {
 .cs-copy-toast--visible { opacity: 1; visibility: visible; }
 
 @media (max-width: 600px) {
+  .sticky-bar-inner { padding: 0 10px; }
   :root { --px: 10px; }
   .cs-intro { line-height: 26px; }
   .popup-backdrop {
