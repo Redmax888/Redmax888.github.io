@@ -533,7 +533,6 @@ body {
 
   /* Contact — border-top + border-bottom (Figma Frame 35) */
   .nav-contact {
-    justify-content: flex-end;
     gap: 32px;
     width: 100%;
     border-top: 2px solid var(--rule);
