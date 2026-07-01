@@ -96,7 +96,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 500;
-  color: #8D8D8D;
+  color: #000000;
   white-space: nowrap;
 }
 
@@ -543,7 +543,7 @@ body {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
-    color: #8D8D8D;
+    color: #000000;
   }
   .contact-link {
     font-size: 14px;
@@ -667,7 +667,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #8D8D8D;
+  color: #000000;
   text-decoration: none;
 }
 .sticky-bar-links {
@@ -737,7 +737,7 @@ body {
   border-radius: 96px;
   padding: 0;
   cursor: pointer;
-  color: #8D8D8D;
+  color: #000000;
   transition: color 0.15s ease;
 }
 .popup-close:hover { color: #000; }
@@ -797,8 +797,8 @@ body {
   outline: none;
   transition: border-color 0.15s ease;
 }
-.popup-input::placeholder { color: #8D8D8D; }
-.popup-input:focus { border-color: #8D8D8D; }
+.popup-input::placeholder { color: #000000; }
+.popup-input:focus { border-color: #000000; }
 .popup-input--error { border-color: #ED3C56; }
 .popup-input--error:focus { border-color: #ED3C56; }
 .popup-textarea {
@@ -815,8 +815,8 @@ body {
   outline: none;
   transition: border-color 0.15s ease;
 }
-.popup-textarea::placeholder { color: #8D8D8D; }
-.popup-textarea:focus { border-color: #8D8D8D; }
+.popup-textarea::placeholder { color: #000000; }
+.popup-textarea:focus { border-color: #000000; }
 .popup-textarea--error { border-color: #ED3C56; }
 .popup-textarea--error:focus { border-color: #ED3C56; }
 .popup-send {
