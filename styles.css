@@ -142,6 +142,7 @@ body {
   gap: 15px;
   text-decoration: none;
   color: var(--muted);
+  transition: opacity 0.3s ease;
 }
 
 .scroll-hint:focus-visible { outline: 2px solid var(--muted); outline-offset: 4px; }
@@ -508,7 +509,7 @@ body {
   :root { --px: 10px; }
 
   /* ── Hero ── */
-  .hero-bio { font-size: 26px; line-height: 36px; }
+  .hero-bio { font-size: clamp(22px, 7vw, 34px); line-height: 1.4; }
 
   /* Nav: remove shared border; each child row owns its own */
   .hero-nav {

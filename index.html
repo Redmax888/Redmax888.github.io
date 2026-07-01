@@ -353,7 +353,7 @@
       var visible = entries[0].isIntersecting;
       scrollHint.style.opacity = visible ? '1' : '0';
       scrollHint.style.pointerEvents = visible ? '' : 'none';
-    }, { threshold: 1.0 }).observe(scrollHint);
+    }, { threshold: 0.7 }).observe(scrollHint);
   }
 })();
 </script>
