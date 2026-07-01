@@ -372,6 +372,15 @@ body {
   color: #2F80ED;
 }
 
+.work-title--muted {
+  color: #3B3B3B;
+}
+
+.work-card--disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
 /* ─── Footer credit ──────────────────────────────────────── */
 .footer-credit {
   display: flex;
