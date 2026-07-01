@@ -148,10 +148,10 @@ body {
 .scroll-hint:focus-visible { outline: 2px solid var(--muted); outline-offset: 4px; }
 
 .scroll-label {
-  font-family: var(--sans);
-  font-size: 24px;
+  font-family: var(--ui);
+  font-size: 18px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 30px;
   color: #000000;
   text-align: center;
   white-space: nowrap;
