@@ -444,5 +444,113 @@
   });
 })();
 </script>
+
+<script>
+/* Page load: bio → nav row → arrow slides top→bottom then bounces. ~1.1s total */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var bio         = document.querySelector('.hero-bio');
+  var heroNav     = document.querySelector('.hero-nav');
+  var scrollArrow = document.querySelector('.scroll-arrow');
+  var scrollLabel = document.querySelector('.scroll-label');
+  if (!bio) return;
+
+  var DUR  = 0.6;
+  var STEP = 0.20;
+  var t0   = 0.22; /* shifted so bio starts as black overlay begins to lift */
+
+  /* black overlay — holds 200ms then fades, content reveals through it */
+  var overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:#fff;z-index:9999;pointer-events:none;';
+  document.body.appendChild(overlay);
+  setTimeout(function () {
+    overlay.style.transition = 'opacity 0.35s ease';
+    overlay.style.opacity = '0';
+    setTimeout(function () { overlay.parentNode && overlay.parentNode.removeChild(overlay); }, 400);
+  }, 200);
+
+  /* hide bio + nav; pause + hide arrow (label stays visible via IO) */
+  bio.style.opacity = '0';
+  bio.style.transform = 'translateX(-10px)';
+  if (heroNav) { heroNav.style.opacity = '0'; heroNav.style.transform = 'translateX(-10px)'; }
+  if (scrollLabel) scrollLabel.style.opacity = '0';
+  if (scrollArrow) {
+    scrollArrow.style.animation = 'none'; /* kill bounce so it doesn't override transform */
+    scrollArrow.style.opacity = '0';
+    scrollArrow.style.transform = 'translateY(-26px)';
+  }
+
+  function run() {
+    var d = [t0, t0 + STEP, t0 + STEP * 2].map(function (v) { return v.toFixed(2); });
+
+    /* RAF1: set all transitions */
+    requestAnimationFrame(function () {
+      var ease = ' cubic-bezier(0.22,1,0.36,1) ';
+      bio.style.transition = 'opacity ' + DUR + 's' + ease + d[0] + 's,transform ' + DUR + 's' + ease + d[0] + 's';
+      if (heroNav) heroNav.style.transition = 'opacity ' + DUR + 's' + ease + d[1] + 's,transform ' + DUR + 's' + ease + d[1] + 's';
+      if (scrollLabel) scrollLabel.style.transition = 'opacity 0.4s ease ' + d[2] + 's';
+      if (scrollArrow) scrollArrow.style.transition =
+        'opacity 0.25s ease ' + d[2] + 's,' +
+        'transform ' + DUR + 's' + ease + d[2] + 's';
+
+      /* RAF2: trigger */
+      requestAnimationFrame(function () {
+        bio.style.opacity = '1'; bio.style.transform = 'none';
+        if (heroNav)    { heroNav.style.opacity = '1'; heroNav.style.transform = 'none'; }
+        if (scrollLabel) scrollLabel.style.opacity = '1';
+        if (scrollArrow) { scrollArrow.style.opacity = '1'; scrollArrow.style.transform = 'none'; }
+
+        /* after arrow finishes: clear inline styles so bounce takes over */
+        setTimeout(function () {
+          bio.style.opacity = ''; bio.style.transform = ''; bio.style.transition = '';
+          if (heroNav) { heroNav.style.opacity = ''; heroNav.style.transform = ''; heroNav.style.transition = ''; }
+          if (scrollLabel) { scrollLabel.style.opacity = ''; scrollLabel.style.transition = ''; }
+          if (scrollArrow) {
+            scrollArrow.style.opacity = '';
+            scrollArrow.style.transform = '';
+            scrollArrow.style.transition = '';
+            scrollArrow.style.animation = ''; /* re-enable bounce from CSS */
+          }
+        }, (parseFloat(d[2]) + DUR + 0.1) * 1000);
+      });
+    });
+  }
+
+  document.fonts && document.fonts.ready
+    ? document.fonts.ready.then(run)
+    : setTimeout(run, 150);
+}());
+</script>
+
+<script>
+/* Custom cursor */
+(function () {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+  var cur = document.createElement('div');
+  cur.className = 'custom-cursor';
+  document.body.appendChild(cur);
+  var mx = -200, my = -200, cx = -200, cy = -200;
+  document.addEventListener('mousemove', function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!cur.classList.contains('custom-cursor--visible')) {
+      cx = mx; cy = my;
+      cur.classList.add('custom-cursor--visible');
+    }
+  });
+  document.addEventListener('mouseleave', function () {
+    cur.classList.remove('custom-cursor--visible');
+  });
+  document.querySelectorAll('a, button, [role="button"]').forEach(function (el) {
+    el.addEventListener('mouseenter', function () { cur.classList.add('custom-cursor--large'); });
+    el.addEventListener('mouseleave', function () { cur.classList.remove('custom-cursor--large'); });
+  });
+  (function tick() {
+    cx += (mx - cx) * 0.12;
+    cy += (my - cy) * 0.12;
+    cur.style.transform = 'translate(' + cx + 'px, ' + cy + 'px)';
+    requestAnimationFrame(tick);
+  }());
+}());
+</script>
 </body>
 </html>
