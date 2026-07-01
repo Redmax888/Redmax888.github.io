@@ -348,9 +348,24 @@ body {
 }
 
 .work-thumb {
+  position: relative;
   overflow: hidden;
   flex-shrink: 0;
   height: 160px;
+}
+
+.work-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.work-card:hover .work-thumb::after {
+  opacity: 0.1;
 }
 
 .work-thumb--sm { width: 240px; }
