@@ -92,11 +92,11 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--sans);
-  font-size: clamp(15px, 1.67vw, 24px);
-  line-height: 36px;
+  font-family: var(--ui);
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 500;
-  color: #000000;
+  color: #8D8D8D;
   white-space: nowrap;
 }
 
@@ -539,13 +539,11 @@ body {
     padding: 22px 0;
   }
 
-  /* Accent text: lock to 24px / 36px (clamp shrinks it otherwise) */
   .specialism {
-    font-family: var(--ui);
     font-size: 14px;
-    line-height: 17px;
+    line-height: 21px;
     font-weight: 400;
-    color: #000000;
+    color: #8D8D8D;
   }
   .contact-link {
     font-size: 14px;
