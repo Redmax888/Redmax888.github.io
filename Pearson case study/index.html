@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearson, Apprentice 360 — Maxim Latanovschii</title>
+  <meta name="description" content="Early-career UX/UI design for Pearson's Apprentice 360 — a mobile platform for apprentices and their training providers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Public+Sans:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="sticky-bar" id="stickyBar" aria-hidden="true">
+    <div class="sticky-bar-inner">
+      <a href="../index.html" class="sticky-bar-name">Maxim Latanovschii</a>
+      <div class="sticky-bar-links">
+        <a href="mailto:maximlats@gmail.com" class="sticky-bar-link" data-letstalk>Let's talk</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- ══════════════════════════════════════
+         NAVIGATION
+    ══════════════════════════════════════ -->
+    <nav class="cs-nav" aria-label="Page navigation">
+      <a href="../index.html" class="cs-nav-identity">Maxim Latanovschii</a>
+      <div class="cs-nav-links">
+        <a href="https://www.linkedin.com/in/maxim-latanovschii/" class="cs-nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:maximlats@gmail.com" class="cs-nav-link" data-letstalk>Let's talk</a>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section class="cs-hero" aria-labelledby="cs-title">
+
+      <div class="cs-hero-top">
+        <div class="cs-meta">
+          <span class="cs-meta-line" aria-hidden="true"></span>
+          <span class="cs-meta-text">Old work / 2017</span>
+        </div>
+        <h1 class="cs-title" id="cs-title">Pearson, Apprentice 360.</h1>
+      </div>
+
+      <div class="cs-hero-bottom">
+        <p class="cs-intro">A mobile platform for apprentices and their training providers — tracking progress, connecting with mentors, and managing the learning journey. This is early-career work. No interactive case study exists; the design is presented here as a full-document image.</p>
+        <ul class="cs-tags" aria-label="Project categories">
+          <li class="tag tag--primary">Education</li>
+          <li class="tag">Mobile design</li>
+          <li class="tag">UX/UI</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DESIGN DOCUMENT IMAGE
+    ══════════════════════════════════════ -->
+    <div class="cs-doc-img">
+      <img
+        src="assets/pearson-360.jpg"
+        alt="Pearson Apprentice 360 — full design document showing colour palette, sketches, wireframes, and final screens for authorization, dashboard, messaging, community, workbook and job search flows"
+        width="1920"
+      >
+    </div>
+
+    <!-- ══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════ -->
+    <footer class="cs-footer" aria-label="Footer">
+
+      <p class="cs-footer-line">
+        More of my work →
+        <a href="../index.html">Portfolio</a>
+      </p>
+      <p class="cs-footer-line">
+        Want to talk design →
+        <a href="mailto:maximlats@gmail.com">maximlats@gmail.com</a>
+      </p>
+
+      <div class="cs-footer-credit">
+        <div class="cs-footer-credit-info">
+          <p>Maxim Latanovschii</p>
+          <p>London, UK · <a href="mailto:maximlats@gmail.com">maximlats@gmail.com</a></p>
+          <p>© 2026, designed and coded by me</p>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script>
+  (function() {
+    var bar = document.getElementById('stickyBar');
+    if (!bar) return;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 80) {
+        bar.classList.add('sticky-bar--visible');
+        bar.removeAttribute('aria-hidden');
+      } else {
+        bar.classList.remove('sticky-bar--visible');
+        bar.setAttribute('aria-hidden', 'true');
+      }
+    }, { passive: true });
+  })();
+  </script>
+
+<!-- ══ LET'S TALK POPUP ══ -->
+<div class="cs-copy-toast" id="sentToast" aria-live="polite" aria-atomic="true">Message sent. I'll reply soon.</div>
+
+<div class="popup-backdrop" id="letsTalkBackdrop" aria-hidden="true">
+  <div class="popup" id="letsTalkPopup" role="dialog" aria-labelledby="popupTitle" aria-modal="false">
+    <div class="popup-top">
+      <div class="popup-hgroup">
+        <div class="popup-header">
+          <button class="popup-close" id="popupClose" aria-label="Close">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <h2 class="popup-title" id="popupTitle">Let's talk</h2>
+      </div>
+      <p class="popup-body-text">Open to new roles, contracts, or just a chat about UX and designing for experts. I'll reply within a day.</p>
+    </div>
+    <div class="popup-bottom">
+      <div class="popup-fields">
+        <div class="popup-field">
+          <label class="popup-label" for="popupEmail">Your email</label>
+          <input class="popup-input" id="popupEmail" type="email" autocomplete="email">
+        </div>
+        <div class="popup-field">
+          <label class="popup-label" for="popupTextarea">Message</label>
+          <textarea class="popup-textarea" id="popupTextarea"></textarea>
+        </div>
+      </div>
+      <button class="popup-send" id="popupSend">Send message</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var backdrop = document.getElementById('letsTalkBackdrop');
+  var closeBtn = document.getElementById('popupClose');
+  var sendBtn  = document.getElementById('popupSend');
+  var textarea = document.getElementById('popupTextarea');
+  var emailInput = document.getElementById('popupEmail');
+
+  function openPopup() {
+    backdrop.classList.add('popup-backdrop--visible');
+    backdrop.removeAttribute('aria-hidden');
+  }
+  function closePopup() {
+    backdrop.classList.remove('popup-backdrop--visible');
+    backdrop.setAttribute('aria-hidden', 'true');
+    textarea.value = '';
+    emailInput.value = '';
+    clearErrors();
+  }
+
+  document.querySelectorAll('[data-letstalk]').forEach(function(el) {
+    el.addEventListener('click', function(e) { e.preventDefault(); openPopup(); });
+  });
+
+  backdrop.addEventListener('click', function(e) { if (e.target === backdrop) closePopup(); });
+  closeBtn.addEventListener('click', closePopup);
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopup(); });
+
+  function clearErrors() {
+    emailInput.classList.remove('popup-input--error');
+    textarea.classList.remove('popup-textarea--error');
+  }
+  emailInput.addEventListener('input', function() { emailInput.classList.remove('popup-input--error'); });
+  textarea.addEventListener('input', function() { textarea.classList.remove('popup-textarea--error'); });
+
+  sendBtn.addEventListener('click', function() {
+    var email = emailInput.value.trim();
+    var msg = textarea.value.trim();
+    var valid = true;
+    if (!email) { emailInput.classList.add('popup-input--error'); emailInput.focus(); valid = false; }
+    if (!valid) return;
+    fetch('https://formspree.io/f/xzdlaagv', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: emailInput.value.trim(), message: msg })
+    }).then(function(r) {
+      if (r.ok) {
+        closePopup();
+        var toast = document.getElementById('sentToast');
+        toast.classList.add('cs-copy-toast--visible');
+        setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(function() {
+      alert('Something went wrong. Please try again.');
+    });
+  });
+})();
+</script>
+</body>
+</html>
