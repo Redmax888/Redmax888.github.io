@@ -114,8 +114,8 @@ body {
 
 .contact-link {
   font-family: var(--sans);
-  font-size: clamp(15px, 1.67vw, 24px);
-  line-height: 36px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 500;
   color: #000000;
   text-decoration: underline;
@@ -130,7 +130,7 @@ body {
   outline: none;
 }
 
-/* Scroll hint */
+/* Scroll hint — WIFE TEST scroll prominent / links smaller */
 .scroll-hint {
   position: absolute;
   bottom: 61px;
@@ -139,20 +139,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 24px;
   text-decoration: none;
-  color: var(--muted);
+  color: #000000;
   transition: opacity 0.3s ease;
 }
 
 .scroll-hint:focus-visible { outline: 2px solid var(--muted); outline-offset: 4px; }
 
 .scroll-label {
-  font-family: var(--ui);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #000000;
   text-align: center;
   white-space: nowrap;
 }
@@ -548,13 +548,19 @@ body {
     color: #000000;
   }
   .contact-link {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 30px;
-    font-weight: 500;
+    font-weight: 400;
     color: #000000;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+  }
+  .scroll-label {
+    font-family: var(--ui);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
   }
 
   /* ── Case studies ── */
