@@ -316,7 +316,7 @@ body {
 .cs-desc {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 500;
   color: var(--body);
   max-width: 826px;
@@ -575,7 +575,6 @@ body {
 
   /* Title 2 mobile: 34px */
   .cs-title { font-size: 34px; line-height: 48px; }
-  .cs-desc { line-height: 26px; }
 
   /* Tags: plain colour fills, rounded right corners, no SVG background */
   .cs-tags { gap: 10px; }
