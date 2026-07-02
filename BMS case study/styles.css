@@ -594,6 +594,7 @@
 
 @media (max-width: 600px) {
   .cs-body { line-height: 26px; }
+  .cs-body-accent { font-family: var(--ui); font-size: 18px; line-height: 26px; }
   .cs-sep { padding-top: 45px; }
   .cs-section-inner--mb { margin-bottom: 34px; }
   .cs-section[aria-labelledby="wf1-heading"] .cs-section-inner--mb,
