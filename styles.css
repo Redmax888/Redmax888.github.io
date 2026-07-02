@@ -512,7 +512,7 @@ body {
   .sticky-bar-inner { padding: 0 10px; }
 
   /* ── Hero ── */
-  .hero-bio { font-size: clamp(26px, 8vw, 36px); line-height: 48px; }
+  .hero-bio { font-size: clamp(26px, 8vw, 36px); line-height: 42px; }
 
   /* Nav: remove shared border; each child row owns its own */
   .hero-nav {
@@ -581,7 +581,7 @@ body {
 
   .case-study { align-items: stretch; gap: 24px; }
 
-  .cs-title { font-size: clamp(26px, 8vw, 36px); line-height: 48px; }
+  .cs-title { font-size: clamp(26px, 8vw, 36px); line-height: 42px; }
 
   /* Tags: plain colour fills, rounded right corners, no SVG background */
   .cs-tags { gap: 10px; }
