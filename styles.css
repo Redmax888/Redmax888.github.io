@@ -302,7 +302,7 @@ body {
   display: inline-flex;
   align-items: center;
   height: 40px;
-  padding: 0 28px;
+  padding: 0 16px;
   background-image: url('assets/tag-light.svg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -314,7 +314,7 @@ body {
   white-space: nowrap;
 }
 
-.tag--primary { background-image: url('assets/tag-dark.svg'); }
+.tag--primary { background-image: url('assets/tag-light.svg'); }
 
 .cs-desc {
   font-family: var(--ui);
@@ -595,7 +595,7 @@ body {
   }
   .tag--primary {
     background-image: none;
-    background-color: var(--tag-1);
+    background-color: #F5F5F5;
   }
 
   /* ── Footer ── */
