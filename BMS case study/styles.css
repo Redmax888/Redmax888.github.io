@@ -207,7 +207,7 @@
   font-family: var(--sans);
   font-size: 18px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--body);
 }
 
@@ -302,7 +302,7 @@
 
 .cs-attribution strong {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 22px;
   color: var(--body);
   margin-bottom: 2px;
