@@ -63,7 +63,7 @@
   height: auto;
   aspect-ratio: 1400 / 768;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: clamp(14px, 2.14vw, 30px);
 }
 
 /* ─── Section shell ──────────────────────────────────────── */
@@ -114,7 +114,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 30px;
+  border-radius: clamp(14px, 2.14vw, 30px);
 }
 
 /* ─── Problem section ─────────────────────────────────────── */
