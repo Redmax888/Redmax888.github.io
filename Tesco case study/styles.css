@@ -173,7 +173,7 @@
 .cs-slide-sub {
   font-family: var(--ui);
   font-size: clamp(10px, 1.2vw, 18px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.667;
   color: #00539E;
 }
@@ -194,7 +194,7 @@
   z-index: 2;
   font-family: var(--ui);
   font-size: clamp(10px, 1.25vw, 18px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.667;
   color: #7D7D7D;
   pointer-events: none;
@@ -216,7 +216,7 @@
   z-index: 2;
   font-family: var(--ui);
   font-size: clamp(10px, 1.25vw, 18px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.667;
   color: #7D7D7D;
   pointer-events: none;
@@ -322,7 +322,7 @@
   align-items: center;
 }
 .sticky-bar-name {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Public Sans', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -330,7 +330,7 @@
   text-decoration: none;
 }
 .sticky-bar-link {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Public Sans', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -343,9 +343,9 @@
 
 /* ─── Let's Talk popup ───────────────────────────────────── */
 .popup-label {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Public Sans', system-ui, sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 30px;
   color: #333;
 }

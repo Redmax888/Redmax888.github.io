@@ -36,7 +36,7 @@ body {
   --serif-deck: 'Canela Deck Trial', Georgia, serif;
   --serif-text: 'Canela Text Trial', Georgia, serif;
   --sans:    'Public Sans', system-ui, sans-serif;
-  --ui:      'Inter', system-ui, sans-serif;
+  --ui:      'Public Sans', system-ui, sans-serif;
 
   --black:   #000;
   --body:    #333;
@@ -66,7 +66,7 @@ body {
 .cs-nav-identity {
   font-family: var(--sans);
   font-size: clamp(15px, 1.67vw, 24px);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--muted);
   text-decoration: none;
 }
@@ -80,7 +80,7 @@ body {
 .cs-nav-link {
   font-family: var(--sans);
   font-size: clamp(15px, 1.67vw, 24px);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--black);
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -100,7 +100,7 @@ body {
   font-family: var(--sans);
   font-size: clamp(18px, 1.71vw, 24px);
   line-height: 36px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--body);
   max-width: 940px;
 }
@@ -337,7 +337,7 @@ body {
   color: #fff;
   font-family: var(--ui);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 30px;
   padding: 8px 16px;
   border: none;
