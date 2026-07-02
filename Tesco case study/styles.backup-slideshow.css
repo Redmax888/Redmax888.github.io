@@ -32,10 +32,10 @@ body {
   --serif-deck: 'Canela Deck Trial', Georgia, serif;
   --serif-text: 'Canela Text Trial', Georgia, serif;
   --sans:    'Public Sans', system-ui, sans-serif;
-  --ui:      'Inter', system-ui, sans-serif;
+  --ui:      'Public Sans', system-ui, sans-serif;
 
   --black:   #000;
-  --body:    #333;
+  --body:    #1A1A1A;
   --muted:   #8D8D8D;
   --rule:    #F2F2F2;
 

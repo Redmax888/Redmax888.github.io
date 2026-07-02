@@ -39,7 +39,7 @@ body {
   --ui:      'Public Sans', system-ui, sans-serif;
 
   --black:   #000;
-  --body:    #333;
+  --body:    #1A1A1A;
   --muted:   #8D8D8D;
   --rule:    #F2F2F2;
 
@@ -278,7 +278,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #333;
+  color: #1A1A1A;
   margin: 0;
 }
 .popup-bottom {
@@ -305,7 +305,7 @@ body {
   font-family: var(--ui);
   font-size: 16px;
   line-height: 24px;
-  color: #333;
+  color: #1A1A1A;
   outline: none;
   transition: border-color 0.15s ease;
 }
@@ -323,7 +323,7 @@ body {
   font-family: var(--ui);
   font-size: 16px;
   line-height: 24px;
-  color: #333;
+  color: #1A1A1A;
   outline: none;
   transition: border-color 0.15s ease;
 }
