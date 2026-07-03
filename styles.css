@@ -319,7 +319,7 @@ body {
 .cs-desc {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 26px;
+  line-height: 30px;
   font-weight: 400;
   color: var(--body);
   max-width: 826px;
@@ -583,6 +583,7 @@ body {
   .case-study { align-items: stretch; gap: 24px; }
 
   .cs-title { font-size: clamp(26px, 8vw, 36px); line-height: 42px; max-width: none; }
+  .cs-desc { line-height: 26px; }
 
   /* Tags: plain colour fills, rounded right corners, no SVG background */
   .cs-tags { gap: 10px; }
