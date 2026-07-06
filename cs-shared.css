@@ -155,7 +155,8 @@ body {
   color: var(--black);
 }
 
-.cs-footer-credit-info p + p { margin-top: 8px; }
+.cs-footer-credit-info p { margin: 0; }
+.cs-footer-credit-info p + p { margin-top: 4px; }
 
 .cs-footer-credit-info a {
   color: inherit;
