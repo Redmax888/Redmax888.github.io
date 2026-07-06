@@ -85,8 +85,10 @@
       </p>
       <p class="cs-footer-line">
         Want to talk design →
-        <a href="mailto:maximlats@gmail.com">maximlats@gmail.com</a>
+        <button class="cs-copy-email" onclick="copyEmail()" type="button"><span>maximlats@gmail.com</span><svg class="cs-copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.57942 16.0019H4.99693C3.89147 16.0019 2.99609 15.1066 2.99609 14.0011V4.99693C2.99609 3.89147 3.89147 2.99609 4.99693 2.99609H13.0011C14.1066 2.99609 15.0019 3.89147 15.0019 4.99693V6.99818" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19 21H11C9.895 21 9 20.105 9 19V10C9 8.895 9.895 8 11 8H19C20.105 8 21 8.895 21 10V19C21 20.105 20.105 21 19 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </p>
+
+      <div class="cs-copy-toast" aria-live="polite" aria-atomic="true">Email address copied</div>
 
       <div class="cs-footer-credit">
         <div class="cs-footer-credit-info">
@@ -209,6 +211,15 @@
     });
   });
 })();
+</script>
+<script>
+function copyEmail() {
+  navigator.clipboard.writeText('maximlats@gmail.com').then(function() {
+    var toast = document.querySelector('.cs-copy-toast');
+    toast.classList.add('cs-copy-toast--visible');
+    setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
+  });
+}
 </script>
 </body>
 </html>
