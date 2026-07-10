@@ -931,17 +931,7 @@ body {
   color: var(--black);
 }
 
-.testimonials-see-all {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.testimonials-see-all a {
-  font-family: var(--ui);
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
+.testimonials-see-all-link {
   color: #2F80ED;
   text-decoration: none;
 }
@@ -1045,7 +1035,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .testimonials { padding-top: 24px; }
+  .testimonials { padding-top: 64px; }
   .work-with-me { margin-top: 48px; padding: 16px 20px 24px; }
   .work-with-me-btn { align-self: stretch; text-align: center; }
   .footer-credit { margin-top: 24px; }
