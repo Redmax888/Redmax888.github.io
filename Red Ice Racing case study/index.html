@@ -77,20 +77,35 @@
     <!-- ══════════════════════════════════════
          FOOTER
     ══════════════════════════════════════ -->
-    <footer class="cs-footer" aria-label="Footer">
 
-      <p class="cs-footer-line">
-        More of my work →
-        <a href="../index.html">Portfolio</a>
-      </p>
-      <p class="cs-footer-line">
-        Want to talk design →
-        <button class="cs-copy-email" onclick="copyEmail()" type="button"><span>maximlats@gmail.com</span><svg class="cs-copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.57942 16.0019H4.99693C3.89147 16.0019 2.99609 15.1066 2.99609 14.0011V4.99693C2.99609 3.89147 3.89147 2.99609 4.99693 2.99609H13.0011C14.1066 2.99609 15.0019 3.89147 15.0019 4.99693V6.99818" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19 21H11C9.895 21 9 20.105 9 19V10C9 8.895 9.895 8 11 8H19C20.105 8 21 8.895 21 10V19C21 20.105 20.105 21 19 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      </p>
+    <!-- ══════════════════════════════════════
+         TESTIMONIALS
+    ══════════════════════════════════════ -->
+
+
+    <!-- ══════════════════════════════════════
+         WORK WITH ME
+    ══════════════════════════════════════ -->
+    <div class="cs-work-with-me-section">
+      <hr class="cs-section-rule" aria-hidden="true">
+      <p class="cs-more-work">Explore more of my work &rarr; <a href="../index.html">Portfolio</a></p>
+      <div class="work-with-me">
+        <div class="work-with-me-text">
+          <p class="work-with-me-title">Work with me</p>
+          <p class="work-with-me-body">I take on complex product work end to end. I can bring in a team of experienced specialists I trust when a project needs to scale. Available for contract and project work.</p>
+        </div>
+        <button class="work-with-me-btn" data-letstalk>Let's talk</button>
+      </div>
+    </div>
+
+    <footer class="cs-footer" aria-label="Footer">
 
       <div class="cs-copy-toast" aria-live="polite" aria-atomic="true">Email address copied</div>
 
       <div class="cs-footer-credit">
+        <div class="cs-footer-avatar">
+          <img src="../assets/footer-avatar.png" alt="Maxim Latanovschii">
+        </div>
         <div class="cs-footer-credit-info">
           <p>Maxim Latanovschii</p>
           <p>London, UK · <a href="mailto:maximlats@gmail.com">maximlats@gmail.com</a></p>
@@ -220,6 +235,36 @@ function copyEmail() {
     setTimeout(function() { toast.classList.remove('cs-copy-toast--visible'); }, 2500);
   });
 }
+</script>
+<script>
+/* Custom cursor */
+(function () {
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+  var cur = document.createElement("div");
+  cur.className = "custom-cursor";
+  document.body.appendChild(cur);
+  var mx = -200, my = -200, cx = -200, cy = -200;
+  document.addEventListener("mousemove", function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!cur.classList.contains("custom-cursor--visible")) {
+      cx = mx; cy = my;
+      cur.classList.add("custom-cursor--visible");
+    }
+  });
+  document.addEventListener("mouseleave", function () {
+    cur.classList.remove("custom-cursor--visible");
+  });
+  document.querySelectorAll("a, button, [role='button']").forEach(function (el) {
+    el.addEventListener("mouseenter", function () { cur.classList.add("custom-cursor--large"); });
+    el.addEventListener("mouseleave", function () { cur.classList.remove("custom-cursor--large"); });
+  });
+  (function tick() {
+    cx += (mx - cx) * 0.12;
+    cy += (my - cy) * 0.12;
+    cur.style.transform = "translate(" + cx + "px, " + cy + "px)";
+    requestAnimationFrame(tick);
+  }());
+}());
 </script>
 </body>
 </html>

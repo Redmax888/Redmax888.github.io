@@ -57,17 +57,14 @@
 
 /* ─── Footer ─────────────────────────────────────────────── */
 .cs-footer {
+  margin-top: 48px;
   max-width: var(--max);
-  padding: 64px 0 48px;
-  border-top: 2px solid var(--rule);
+  padding: 0 0 48px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.cs-footer-credit {
-  margin-top: 48px;
-}
 
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 720px) {

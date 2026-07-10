@@ -259,7 +259,7 @@
 /* ─── Footer ─────────────────────────────────────────────── */
 .cs-footer {
   max-width: var(--max);
-  padding: 64px 0 48px;
+  padding: 0 0 48px;
   margin-top: 48px;
   display: flex;
   flex-direction: column;
@@ -276,12 +276,6 @@
 }
 
 
-.cs-footer-credit {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 48px;
-}
 
 /* ─── Responsive ──────────────────────────────────────────── */
 @media (max-width: 720px) {

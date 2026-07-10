@@ -336,6 +336,11 @@ body {
 /* ─── Footer ─────────────────────────────────────────────── */
 .footer {
   padding-top: 120px;
+  padding-bottom: 0;
+}
+
+.footer--credit-only {
+  padding-top: 0;
   padding-bottom: 40px;
 }
 
@@ -343,7 +348,7 @@ body {
   font-family: var(--sans);
   font-size: 18px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--black);
   max-width: var(--max-content);
 }
@@ -420,16 +425,15 @@ body {
   align-items: center;
   gap: 16px;
   max-width: var(--max-content);
-  margin-top: 120px;
+  margin-top: 48px;
 }
 
 .footer-avatar {
-  width: 100px;
-  height: 100px;
+  width: 102px;
+  height: 102px;
   flex-shrink: 0;
+  border-radius: 50%;
   overflow: hidden;
-  background: #E2E2E2;
-  border: 0.83px solid #000;
 }
 
 .footer-avatar img {
@@ -878,6 +882,182 @@ body {
   }
 }
 
+
+/* ─── Testimonials ───────────────────────────────────────── */
+.testimonials {
+  padding-top: 120px;
+  max-width: var(--max-content);
+}
+
+.testimonials-heading {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.testimonial-row {
+  display: flex;
+  gap: 64px;
+}
+
+.testimonial {
+  flex: 0 0 calc(50% - 32px);
+  max-width: 564px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonial-quote {
+  font-family: var(--ui);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.testimonials-see-all {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.testimonials-see-all a {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #2F80ED;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #f2f2f2;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.testimonial-role {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+/* ─── Work with me ───────────────────────────────────────── */
+.home-section-rule {
+  width: 100%;
+  max-width: var(--max-content);
+  height: 2px;
+  background: #f2f2f2;
+  border: none;
+  margin-top: 120px;
+}
+
+.work-with-me {
+  margin-top: 48px;
+  width: 100%;
+  max-width: var(--max-content);
+  border: 1px solid var(--black);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+}
+
+.work-with-me-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work-with-me-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 2.78vw, 40px);
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.work-with-me-body {
+  font-family: var(--ui);
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.work-with-me-btn {
+  align-self: flex-start;
+  background: var(--black);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.work-with-me-btn:hover { background: #444; }
+
+@media (max-width: 900px) {
+  .testimonial-row { gap: 40px; }
+}
+
+@media (max-width: 700px) {
+  .testimonial-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .testimonial { flex: none; }
+  .testimonial-quote { max-width: none; }
+
+  .work-with-me-body { font-size: 20px; line-height: 30px; }
+}
+
+@media (max-width: 600px) {
+  .testimonials { padding-top: 24px; }
+  .home-section-rule { margin-top: 48px; }
+  .work-with-me { margin-top: 24px; padding: 16px 20px 24px; }
+  .testimonials-see-all { margin-top: 24px; }
+  .work-with-me-btn { align-self: stretch; text-align: center; }
+  .footer-credit { margin-top: 24px; }
+}
 
 /* ── Custom cursor ─────────────────────────────────────────── */
 @media (pointer: fine) {

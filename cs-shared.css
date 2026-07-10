@@ -147,6 +147,28 @@ body {
   text-underline-offset: 3px;
 }
 
+.cs-footer-avatar {
+  width: 102px;
+  height: 102px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cs-footer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+.cs-footer-credit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .cs-footer-credit-info {
   font-family: var(--ui);
   font-size: 14px;
@@ -384,8 +406,182 @@ body {
 }
 .popup-send:hover { background: #444; }
 
+/* ─── Testimonials ───────────────────────────────────────── */
+.testimonials {
+  padding-top: 120px;
+  max-width: var(--max-content);
+}
+
+.testimonials-heading {
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.testimonial-row {
+  display: flex;
+  gap: 64px;
+}
+
+.testimonial {
+  flex: 0 0 calc(50% - 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonial-quote {
+  font-family: var(--ui);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #000;
+  max-width: 540px;
+}
+
+.testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+}
+
+.testimonial-role {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #3B3B3B;
+}
+
+/* ─── Work with me (case study wrapper) ─────────────────── */
+.cs-work-with-me-section {
+  margin-top: 48px;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: var(--max-content);
+  width: 100%;
+}
+
+.cs-section-rule {
+  width: 100%;
+  height: 2px;
+  background: #f2f2f2;
+  border: none;
+}
+
+.cs-more-work {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #1A1A1A;
+}
+
+.cs-more-work a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* ─── Work with me ───────────────────────────────────────── */
+.work-with-me {
+  margin-top: 0;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #000;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+}
+
+.work-with-me-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work-with-me-title {
+  font-family: var(--serif-text);
+  font-size: clamp(28px, 2.78vw, 40px);
+  line-height: 1.35;
+  font-weight: 700;
+  color: #000;
+}
+
+.work-with-me-body {
+  font-family: var(--ui);
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #000;
+}
+
+.work-with-me-btn {
+  align-self: flex-start;
+  background: #000;
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.work-with-me-btn:hover { background: #444; }
+
 /* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .testimonial-row { gap: 40px; }
+}
+
+@media (max-width: 700px) {
+  .testimonial-row { flex-direction: column; gap: 40px; }
+  .testimonial { flex: none; }
+  .testimonial-quote { max-width: none; }
+  .work-with-me-body { font-size: 20px; line-height: 30px; }
+}
+
+@media (max-width: 600px) {
+  .testimonials { padding-top: 48px; }
+  .work-with-me { margin-top: 48px; }
+  .work-with-me-btn { align-self: stretch; text-align: center; }
+}
+
 @media (max-width: 720px) {
+  .cs-work-with-me-section { gap: 24px; }
   .cs-nav { flex-wrap: wrap; gap: 16px; }
   .cs-tags { gap: 10px; }
   .tag {
@@ -415,8 +611,34 @@ body {
     max-height: none;
     padding: 16px 20px 24px;
   }
+  .work-with-me { padding: 16px 20px 24px; }
   .popup-send {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* ── Custom cursor ─────────────────────────────────────────── */
+@media (pointer: fine) {
+  html * { cursor: none; }
+
+  .custom-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 40px; height: 40px;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+    background: #fff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.15s ease, height 0.15s ease, margin 0.15s ease;
+    will-change: transform;
+  }
+  .custom-cursor--visible { opacity: 1; }
+  .custom-cursor--large {
+    width: 72px; height: 72px;
+    margin: -36px 0 0 -36px;
   }
 }

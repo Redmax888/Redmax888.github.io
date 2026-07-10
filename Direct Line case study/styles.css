@@ -235,19 +235,13 @@
 /* ─── Footer ─────────────────────────────────────────────── */
 .cs-footer {
   max-width: var(--max);
-  padding: 64px 0 48px;
+  padding: 0 0 48px;
   margin-top: 48px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.cs-footer-credit {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 48px;
-}
 
 /* ─── Meta block ─────────────────────────────────────────── */
 .cs-meta {
@@ -271,7 +265,7 @@
   .cs-account        { gap: 64px; padding-bottom: 64px; }
   .cs-churchill      { gap: 64px; padding: 80px 0; }
   .cs-thanks         { margin-top: 64px; padding-bottom: 64px; }
-  .cs-footer         { margin-top: 40px; padding: 48px 0 32px; }
+  .cs-footer         { margin-top: 48px; padding: 0 0 32px; }
 }
 
 @media (max-width: 480px) {
