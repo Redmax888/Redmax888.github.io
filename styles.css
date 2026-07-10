@@ -932,6 +932,7 @@ body {
 }
 
 .testimonials-see-all-link {
+  font-weight: 400;
   color: #2F80ED;
   text-decoration: none;
 }
