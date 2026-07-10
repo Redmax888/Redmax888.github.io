@@ -943,9 +943,7 @@ body {
   line-height: 28px;
   font-weight: 400;
   color: #2F80ED;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 .testimonial-meta {
