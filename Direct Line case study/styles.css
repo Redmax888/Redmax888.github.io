@@ -222,11 +222,11 @@
 
 /* ─── Thank you ───────────────────────────────────────────── */
 .cs-thanks {
-  font-family: var(--serif-text);
-  font-size: 40px;
-  line-height: 54px;
-  font-weight: 700;
-  color: #2F80ED;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #333333;
   text-align: center;
   margin-top: 64px;
   padding-bottom: 96px;
