@@ -404,9 +404,9 @@ body {
 
 .work-title {
   font-family: var(--ui);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 28px;
   color: #2F80ED;
 }
 
@@ -889,13 +889,19 @@ body {
   max-width: var(--max-content);
 }
 
+.testimonials-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
 .testimonials-heading {
   font-family: var(--sans);
   font-size: 18px;
   line-height: 30px;
   font-weight: 600;
   color: var(--black);
-  margin-bottom: 24px;
 }
 
 .testimonials-grid {
@@ -929,13 +935,12 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 24px;
 }
 
 .testimonials-see-all a {
   font-family: var(--ui);
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 28px;
   font-weight: 400;
   color: #2F80ED;
   text-decoration: underline;
@@ -975,17 +980,8 @@ body {
 }
 
 /* ─── Work with me ───────────────────────────────────────── */
-.home-section-rule {
-  width: 100%;
-  max-width: var(--max-content);
-  height: 2px;
-  background: #f2f2f2;
-  border: none;
-  margin-top: 120px;
-}
-
 .work-with-me {
-  margin-top: 48px;
+  margin-top: 120px;
   width: 100%;
   max-width: var(--max-content);
   border: 1px solid var(--black);
@@ -1052,9 +1048,7 @@ body {
 
 @media (max-width: 600px) {
   .testimonials { padding-top: 24px; }
-  .home-section-rule { margin-top: 48px; }
-  .work-with-me { margin-top: 24px; padding: 16px 20px 24px; }
-  .testimonials-see-all { margin-top: 24px; }
+  .work-with-me { margin-top: 48px; padding: 16px 20px 24px; }
   .work-with-me-btn { align-self: stretch; text-align: center; }
   .footer-credit { margin-top: 24px; }
 }
