@@ -24,7 +24,7 @@ body {
 
 /* ─── Token aliases ──────────────────────────────────────── */
 :root {
-  --serif: 'Canela Text', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
+  --serif: 'Canela Text', 'Canela Deck Trial', 'Canela Text Trial', Georgia, 'Times New Roman', serif;
   --sans:  'Public Sans', system-ui, sans-serif;
   --ui:    'Public Sans', system-ui, sans-serif;
 
@@ -32,8 +32,8 @@ body {
   --body:    #1A1A1A;
   --muted:   #8D8D8D;
   --rule:    #F2F2F2;
-  --tag-1:   #EDEDF0;
-  --tag-2:   #F5F5F5;
+  --tag:     #ebebea;
+  --sage:    #f3f1eb;
 
   --max-content: 1400px;
   --px: clamp(20px, 3.33vw, 48px);
@@ -314,7 +314,6 @@ body {
   white-space: nowrap;
 }
 
-.tag--primary { background-image: url('assets/tag-light.svg'); }
 
 .cs-desc {
   font-family: var(--ui);
@@ -594,13 +593,9 @@ body {
 
   .tag {
     background-image: none;
-    background-color: var(--tag-2);
+    background-color: var(--tag);
     border-radius: 0 4px 0 4px;
     padding: 0 10px;
-  }
-  .tag--primary {
-    background-image: none;
-    background-color: #F5F5F5;
   }
 
   /* ── Footer ── */
@@ -883,20 +878,45 @@ body {
 }
 
 
-/* ─── Testimonials ───────────────────────────────────────── */
-.testimonials {
+/* ─── Built for where you are ────────────────────────────── */
+.built-for {
   padding-top: 120px;
   max-width: var(--max-content);
+  width: 100%;
 }
 
-.testimonials-heading-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.built-for-heading {
+  font-family: var(--serif);
+  font-size: clamp(28px, 2.78vw, 40px);
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--black);
   margin-bottom: 24px;
 }
 
-.testimonials-heading {
+.built-for-row {
+  display: flex;
+  gap: 32px;
+}
+
+.bfw-card {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 32px 24px;
+  border: 1px solid var(--tag);
+  background: #fff;
+}
+
+.bfw-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bfw-category {
   font-family: var(--sans);
   font-size: 18px;
   line-height: 30px;
@@ -904,46 +924,39 @@ body {
   color: var(--black);
 }
 
-.testimonials-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-}
-
-.testimonial-row {
-  display: flex;
-  gap: 64px;
-}
-
-.testimonial {
-  flex: 0 0 calc(50% - 32px);
-  max-width: 564px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.testimonial-quote {
+.bfw-desc {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 28px;
+  line-height: 27px;
   font-weight: 400;
+  color: var(--body);
+}
+
+.bfw-quote-box {
+  background: var(--sage);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bfw-quote {
+  font-family: 'Canela Text Trial', Georgia, serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  font-style: italic;
   color: var(--black);
 }
 
-.testimonials-see-all-link {
-  font-weight: 400;
-  color: #2F80ED;
-  text-decoration: none;
-}
-
-.testimonial-meta {
+.bfw-meta {
   display: flex;
   align-items: center;
   gap: 10px;
+  overflow: hidden;
 }
 
-.testimonial-avatar {
+.bfw-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -952,21 +965,77 @@ body {
   flex-shrink: 0;
 }
 
-.testimonial-name {
-  font-family: var(--ui);
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  color: var(--black);
+.bfw-name-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
-.testimonial-role {
+.bfw-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bfw-name {
+  font-family: var(--ui);
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.bfw-linkedin {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.15s ease;
+}
+
+.bfw-linkedin:hover { opacity: 1; }
+
+.bfw-role {
   font-family: var(--ui);
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: var(--black);
+  white-space: nowrap;
 }
+
+/* ─── Client logos ───────────────────────────────────────── */
+.client-logos {
+  margin-top: 120px;
+  max-width: var(--max-content);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 120px;
+}
+
+.client-logos-row { display: contents; }
+
+.logo-sq {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logo-sq img {
+  position: absolute;
+  display: block;
+}
+
+.logo-inner--bms     { left: 8px; top: 21px; width: 51px; height: 20px; }
+.logo-inner--hcltech { left: 5px; top: 27px; width: 54px; height: 10px; }
+.logo-inner--pearson { left: 5px; top: 27px; width: 54px; height: 11px; }
 
 /* ─── Work with me ───────────────────────────────────────── */
 .work-with-me {
@@ -1021,25 +1090,55 @@ body {
 .work-with-me-btn:hover { background: #444; }
 
 @media (max-width: 900px) {
-  .testimonial-row { gap: 40px; }
+  .built-for-row { gap: 24px; }
+  .client-logos { padding: 40px 32px; gap: 24px; flex-wrap: wrap; justify-content: center; }
 }
 
 @media (max-width: 700px) {
-  .testimonial-row {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .testimonial { flex: none; }
-  .testimonial-quote { max-width: none; }
-
+  .built-for-row { flex-direction: column; gap: 16px; }
+  .bfw-card { gap: 32px; }
   .work-with-me-body { font-size: 20px; line-height: 30px; }
 }
 
 @media (max-width: 600px) {
-  .testimonials { padding-top: 64px; }
-  .work-with-me { margin-top: 48px; padding: 16px 20px 24px; }
-  .work-with-me-btn { align-self: stretch; text-align: center; }
-  .footer-credit { margin-top: 24px; }
+  .built-for { padding-top: 64px; }
+  .built-for-heading { font-size: 24px; line-height: 34px; }
+  .bfw-card { padding: 16px; }
+  .bfw-desc { font-size: 16px; line-height: 22px; }
+  .bfw-quote-box { gap: 24px; }
+  .bfw-name { font-size: 16px; line-height: 22px; }
+
+  .client-logos {
+    margin-top: 64px;
+    padding: 24px 0;
+    gap: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .client-logos-row {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+  }
+  .client-logos-row:first-child { justify-content: center; }
+  .logo-sq { width: 32px; height: 32px; }
+  .logo-inner--bms     { left: 4px;   top: 10.5px; width: 25.5px; height: 10px; }
+  .logo-inner--hcltech { left: 2.5px; top: 13.5px; width: 27px;   height: 5px; }
+  .logo-inner--pearson { left: 2.5px; top: 13.5px; width: 27px;   height: 5.5px; }
+  .logo-imoney   { width: 43px; height: 32px; }
+  .logo-deutsche { width: 32px; height: 32px; }
+  .logo-tesco    { width: 45px; height: 12px; }
+  .logo-dlg      { width: 43px; height: 18px; }
+
+  .work-with-me { margin-top: 48px; padding: 24px 16px; gap: 16px; border-color: var(--tag); }
+  .work-with-me-title { font-size: 24px; line-height: 34px; }
+  .work-with-me-text { gap: 8px; }
+  .work-with-me-body { font-size: 16px; line-height: 22px; }
+  .work-with-me-btn { align-self: flex-start; }
+  .footer-credit { margin-top: 32px; }
 }
 
 /* ── Custom cursor ─────────────────────────────────────────── */
