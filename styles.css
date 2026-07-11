@@ -6,6 +6,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Canela Text Trial';
+  src: url('assets/fonts/CanelaText-LightItalic-Trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
 
 /* ─── Reset ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -422,6 +429,7 @@ body {
 .footer-credit {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 16px;
   max-width: var(--max-content);
   margin-top: 48px;
@@ -944,7 +952,7 @@ body {
   font-family: 'Canela Text Trial', Georgia, serif;
   font-size: 20px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 300;
   font-style: italic;
   color: var(--black);
 }
@@ -1095,7 +1103,7 @@ body {
 }
 
 @media (max-width: 700px) {
-  .built-for-row { flex-direction: column; gap: 16px; }
+  .built-for-row { flex-direction: column; gap: 24px; }
   .bfw-card { gap: 32px; }
   .work-with-me-body { font-size: 20px; line-height: 30px; }
 }
@@ -1106,11 +1114,12 @@ body {
   .bfw-card { padding: 16px; }
   .bfw-desc { font-size: 16px; line-height: 22px; }
   .bfw-quote-box { gap: 24px; }
+  .bfw-header { gap: 0; }
   .bfw-name { font-size: 16px; line-height: 22px; }
 
   .client-logos {
     margin-top: 64px;
-    padding: 24px 0;
+    padding: 24px 48px;
     gap: 48px;
     flex-direction: column;
     align-items: flex-start;
