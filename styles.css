@@ -1175,9 +1175,10 @@ body {
     gap: 29px 48px;
   }
   .client-logos-row { display: contents; }
-  .client-logos-row img { height: 32px; width: auto; }
-  .client-logos-row img.logo-tesco { width: 45px; height: 13px; }
-  .client-logos-row img.logo-dlg   { width: 43px; height: 18px; }
+  .client-logos img { height: 32px; width: auto; }
+  .client-logos img.logo-tesco   { width: 45px;  height: 13px; }
+  .client-logos img.logo-hcltech { width: 43px;  height: 32px; }
+  .client-logos img.logo-dlg     { width: 43px;  height: 18px; }
 
   .badge-new {
     display: inline-flex;
