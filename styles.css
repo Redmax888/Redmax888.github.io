@@ -141,7 +141,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  color: #2F80ED;
+  color: #184FA3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -307,6 +307,15 @@ body {
   color: #184FA3;
   max-width: 826px;
 }
+.cs-title a {
+  color: #184FA3;
+  text-decoration: none;
+}
+.cs-title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 
 .badge-new {
   display: inline-flex;
@@ -432,7 +441,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  color: #2F80ED;
+  color: #184FA3;
 }
 
 .work-title--muted {
@@ -583,7 +592,7 @@ body {
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
-    color: #2F80ED;
+    color: #184FA3;
     text-decoration: none;
   }
   .scroll-label {
@@ -717,7 +726,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #2F80ED;
+  color: #184FA3;
   text-decoration: none;
   transition: color 0.15s ease;
 }
