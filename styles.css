@@ -31,7 +31,7 @@ body {
 
 /* ─── Token aliases ──────────────────────────────────────── */
 :root {
-  --serif: 'Canela Text', 'Canela Deck Trial', 'Canela Text Trial', Georgia, 'Times New Roman', serif;
+  --serif: 'Canela Text', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
   --sans:  'Public Sans', system-ui, sans-serif;
   --ui:    'Public Sans', system-ui, sans-serif;
 
