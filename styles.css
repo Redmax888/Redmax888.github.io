@@ -1030,7 +1030,7 @@ body {
   position: relative;
   width: 64px;
   height: 64px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   flex-shrink: 0;
   overflow: hidden;
 }
