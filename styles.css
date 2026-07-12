@@ -1153,29 +1153,22 @@ body {
     display: inline-flex;
     align-items: center;
     position: relative;
-    width: 50px;
-    height: 26px;
+    width: auto;
+    height: auto;
     background: #FFE747;
     border-radius: 0 0 8px 0;
     font-family: 'Canela Text Trial', Georgia, serif;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 1;
-    padding-left: 7px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 8px;
     color: #000;
     vertical-align: middle;
-    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-bottom: 0;
   }
   .badge-new::before { content: 'new'; }
-  .badge-new::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 10px;
-    height: 4px;
-    background: #B29A00;
-  }
+  .badge-new::after { content: none; }
   .badge-new svg { display: none; }
 
   .work-with-me { margin-top: 48px; padding: 24px 16px; gap: 16px; border-color: var(--tag); }
