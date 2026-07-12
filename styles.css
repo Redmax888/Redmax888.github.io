@@ -1172,7 +1172,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 29px 32px;
   }
   .client-logos-row { display: contents; }
