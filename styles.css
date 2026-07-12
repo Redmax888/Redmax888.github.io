@@ -602,7 +602,10 @@ body {
     line-height: 30px;
     font-weight: 400;
     color: #000000;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2.5%;
+    text-underline-offset: 15%;
+    text-decoration-color: rgba(0, 0, 0, 0.25);
   }
   .scroll-label {
     font-family: var(--ui);
@@ -1067,7 +1070,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 96px;
-  padding: 48px 120px;
+  padding: 48px 0;
 }
 
 .client-logos-row { display: contents; }
@@ -1144,7 +1147,7 @@ body {
 
 @media (max-width: 900px) {
   .built-for-row { gap: 24px; }
-  .client-logos { padding: 40px 32px; gap: 24px; flex-wrap: wrap; justify-content: center; }
+  .client-logos { padding: 40px 0; gap: 24px; flex-wrap: wrap; justify-content: center; }
 }
 
 @media (max-width: 700px) {
@@ -1174,7 +1177,7 @@ body {
   .client-logos-row { display: contents; }
   .client-logos-row img { height: 32px; width: auto; }
   .client-logos-row img.logo-tesco { width: 45px; height: 13px; }
-  .client-logos-row img.logo-dlg   { width: auto; height: 32px; }
+  .client-logos-row img.logo-dlg   { width: 43px; height: 18px; }
 
   .badge-new {
     display: inline-flex;
