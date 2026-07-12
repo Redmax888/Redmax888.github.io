@@ -1,4 +1,18 @@
-/* ─── Canela font (for popup) ────────────────────────────── */
+/* ─── Canela fonts ───────────────────────────────────────── */
+@font-face {
+  font-family: 'Canela Deck Trial';
+  src: url('assets/fonts/CanelaDeck-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canela Deck Trial';
+  src: url('assets/fonts/CanelaDeck-Bold-Trial.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Canela Text Trial';
   src: url('assets/fonts/CanelaText-Bold-Trial.otf') format('opentype');
@@ -32,7 +46,7 @@ body {
 /* ─── Token aliases ──────────────────────────────────────── */
 :root {
   --serif: 'Canela Text', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
-  --serif-display: 'Canela Text', 'Canela Deck Trial', 'Canela Text Trial', Georgia, 'Times New Roman', serif;
+  --serif-display: 'Canela Text', 'Canela Text Trial', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
   --sans:  'Public Sans', system-ui, sans-serif;
   --ui:    'Public Sans', system-ui, sans-serif;
 
