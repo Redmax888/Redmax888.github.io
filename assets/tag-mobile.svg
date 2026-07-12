@@ -1,5 +1,8 @@
 <svg viewBox="0 0 138 33" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 29.65C8 30.14 7.33 30.22 7.21 29.75L0.99 4.10C0.49 2.02 2.02 0 4.10 0L8 0L8 29.65Z" fill="#F3F1EB"/>
-<path d="M8 0H126C128.209 0 130 1.48 130 3.30V33H12C9.791 33 8 31.52 8 29.70V0Z" fill="#F3F1EB"/>
-<path d="M130 3.35C130 2.86 130.842 2.78 130.985 3.25L136.757 28.90C137.389 30.98 135.479 33 132.877 33H130V3.35Z" fill="#F3F1EB"/>
+  <!-- left piece: chamfer at top-left (0,8)→(8,0) -->
+  <path d="M0 8L8 0L8 33L0 33Z" fill="#F3F1EB"/>
+  <!-- centre body: 4px radius top-right and bottom-left -->
+  <path d="M8 0L126 0Q130 0 130 4L130 33L12 33Q8 33 8 29Z" fill="#F3F1EB"/>
+  <!-- right piece: chamfer at bottom-right (138,25)→(130,33) -->
+  <path d="M130 0L138 0L138 25L130 33Z" fill="#F3F1EB"/>
 </svg>
