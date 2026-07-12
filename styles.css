@@ -46,7 +46,7 @@ body {
 /* ─── Token aliases ──────────────────────────────────────── */
 :root {
   --serif: 'Canela Text', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
-  --serif-display: 'Canela Text', 'Canela Text Trial', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
+  --serif-display: 'Canela Text', 'Canela Text Trial', Georgia, 'Times New Roman', serif;
   --sans:  'Public Sans', system-ui, sans-serif;
   --ui:    'Public Sans', system-ui, sans-serif;
 
@@ -54,7 +54,7 @@ body {
   --body:    #1A1A1A;
   --muted:   #8D8D8D;
   --rule:    #F2F2F2;
-  --tag:     #ebebea;
+  --tag:     #F3F1EB;
   --sage:    #f3f1eb;
 
   --max-content: 1400px;
@@ -141,10 +141,8 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  color: #2F80ED;
+  text-decoration: none;
   transition: color 0.15s ease;
 }
 
@@ -538,7 +536,7 @@ body {
   .sticky-bar-inner { padding: 0 10px; }
 
   /* ── Hero ── */
-  .hero-bio { font-size: 34px; line-height: 46px; }
+  .hero-bio { font-size: 32px; line-height: 44px; }
 
   /* Nav: remove shared border; each child row owns its own */
   .hero-nav {
@@ -569,6 +567,7 @@ body {
   }
 
   .specialism {
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -578,10 +577,8 @@ body {
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
-    color: #000000;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    color: #2F80ED;
+    text-decoration: none;
   }
   .scroll-label {
     font-family: var(--ui);
@@ -610,15 +607,16 @@ body {
   .cs-title { font-size: 24px; line-height: 34px; max-width: none; }
   .cs-desc { font-size: 16px; line-height: 22px; }
 
-  /* Tags: plain colour fills, rounded right corners, no SVG background */
-  .cs-tags { gap: 10px; }
+  .cs-tags { gap: 8px 0px; }
 
   .tag {
-    background-image: none;
-    background-color: var(--tag);
-    border-radius: 0 4px 0 4px;
+    background-image: url('assets/tag-mobile.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-radius: 0;
     height: 33px;
-    padding: 0 10px;
+    padding: 0 14px;
   }
 
   /* ── All design work ── */
@@ -700,7 +698,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #000000;
+  color: #8D8D8D;
   text-decoration: none;
 }
 .sticky-bar-links {
@@ -713,13 +711,11 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #000;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  color: #2F80ED;
+  text-decoration: none;
   transition: color 0.15s ease;
 }
-.sticky-bar-link:hover { color: #444; }
+.sticky-bar-link:hover { color: #1a6bc7; }
 
 /* ─── Let's Talk popup ───────────────────────────────────── */
 .popup-backdrop {
@@ -1141,23 +1137,17 @@ body {
 
   .client-logos {
     margin-top: 64px;
-    padding: 24px 20px;
-    gap: 32px;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  .client-logos-row {
-    display: flex;
+    padding: 24px 48px;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 29px 48px;
   }
-  .client-logos-row img { width: 48px; height: 48px; }
-  .logo-imoney { width: 44px; height: 48px; }
-  .logo-tesco  { width: 90px; height: 25px; }
-  .logo-dlg    { width: 90px; height: 38px; }
+  .client-logos-row { display: contents; }
+  .client-logos-row img { height: 32px; width: auto; }
+  .logo-tesco  { width: 45px; height: 13px; }
+  .logo-dlg    { width: auto; height: 32px; }
 
   .work-with-me { margin-top: 48px; padding: 24px 16px; gap: 16px; border-color: var(--tag); }
   .work-with-me-title { font-size: 24px; line-height: 34px; }

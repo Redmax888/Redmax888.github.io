@@ -583,16 +583,19 @@ body {
 @media (max-width: 720px) {
   .cs-work-with-me-section { gap: 24px; }
   .cs-nav { flex-wrap: wrap; gap: 16px; }
-  .cs-tags { gap: 10px; }
+  .cs-tags { gap: 8px 0px; }
   .tag {
-    background-image: none;
-    background-color: #F5F5F5;
-    border-radius: 0 4px 0 4px;
-    padding: 0 10px;
+    background-image: url('assets/tag-mobile.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-radius: 0;
+    height: 33px;
+    padding: 0 14px;
   }
   .tag--primary {
-    background-image: none;
-    background-color: #F5F5F5;
+    background-image: url('assets/tag-mobile.svg');
+    background-color: transparent;
   }
 }
 
