@@ -455,6 +455,7 @@ body {
 
 .work-title--muted {
   color: #3B3B3B;
+  text-decoration: none;
 }
 
 .work-card--disabled {
