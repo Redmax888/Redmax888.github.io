@@ -141,8 +141,10 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  color: #184FA3;
-  text-decoration: none;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
 
@@ -304,17 +306,17 @@ body {
   font-size: clamp(22px, 2.78vw, 40px);
   line-height: 48px;
   font-weight: 700;
-  color: #184FA3;
+  color: #000000;
   max-width: 826px;
 }
 .cs-title a {
-  color: #184FA3;
-  text-decoration: none;
-}
-.cs-title a:hover {
+  color: #000000;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
+}
+.cs-title a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .badge-new {
@@ -441,7 +443,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  color: #184FA3;
+  color: #000000;
 }
 
 .work-title--muted {
@@ -592,7 +594,7 @@ body {
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
-    color: #184FA3;
+    color: #000000;
     text-decoration: none;
   }
   .scroll-label {
@@ -726,11 +728,13 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #184FA3;
-  text-decoration: none;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
-.sticky-bar-link:hover { color: #1a6bc7; }
+.sticky-bar-link:hover { color: #444444; }
 
 /* ─── Let's Talk popup ───────────────────────────────────── */
 .popup-backdrop {
