@@ -53,7 +53,7 @@ body {
   --black:   #000;
   --body:    #1A1A1A;
   --muted:   #8D8D8D;
-  --rule:    #F2F2F2;
+  --rule:    #EBEBEA;
   --tag:     #F3F1EB;
   --sage:    #f3f1eb;
 
@@ -101,8 +101,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 0;
-  border-top: 2px solid var(--rule);
-  border-bottom: 2px solid var(--rule);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .nav-specialisms {
@@ -143,14 +143,16 @@ body {
   font-weight: 400;
   color: #000000;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  text-decoration-thickness: 2.5%;
+  text-underline-offset: 15%;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
   transition: color 0.15s ease;
 }
 
 .contact-link:hover,
 .contact-link:focus-visible {
   color: #444444;
+  text-decoration-color: #000000;
   outline: none;
 }
 
@@ -311,12 +313,10 @@ body {
 }
 .cs-title a {
   color: #000000;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 .cs-title a:hover {
-  text-decoration-thickness: 2px;
+  text-decoration: none;
 }
 
 .badge-new {
@@ -364,7 +364,7 @@ body {
 .cs-rule {
   width: 100%;
   max-width: var(--max-content);
-  height: 2px;
+  height: 1px;
   background: var(--rule);
   border: none;
 }
@@ -445,8 +445,12 @@ body {
   line-height: 28px;
   color: #000000;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration-thickness: 2.5%;
+  text-underline-offset: 15%;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+}
+.work-card:hover .work-title {
+  text-decoration-color: #000000;
 }
 
 .work-title--muted {
@@ -502,7 +506,7 @@ body {
 .footer-rule {
   width: 100%;
   max-width: var(--max-content);
-  height: 2px;
+  height: 1px;
   background: var(--rule);
   border: none;
   margin-top: 24px;
@@ -567,13 +571,13 @@ body {
     padding: 0;
   }
 
-  /* Specialisms — border-top (Figma Frame 19: strokeWeight 2px 0px) */
+  /* Specialisms — border-top (Figma Frame 19: strokeWeight 1px 0px) */
   .nav-specialisms {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 16px;
     width: 100%;
-    border-top: 2px solid var(--rule);
+    border-top: 1px solid var(--rule);
     padding: 25px 0;
   }
 
@@ -581,8 +585,8 @@ body {
   .nav-contact {
     gap: 32px;
     width: 100%;
-    border-top: 2px solid var(--rule);
-    border-bottom: 2px solid var(--rule);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
     padding: 22px 0;
   }
 
@@ -605,7 +609,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
-    color: #BABABA;
+    color: #B2B2B2;
   }
 
   /* ── Case studies ── */
@@ -733,11 +737,12 @@ body {
   line-height: 21px;
   color: #000000;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  text-decoration-thickness: 2.5%;
+  text-underline-offset: 15%;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
   transition: color 0.15s ease;
 }
-.sticky-bar-link:hover { color: #444444; }
+.sticky-bar-link:hover { color: #444444; text-decoration-color: #000000; }
 
 /* ─── Let's Talk popup ───────────────────────────────────── */
 .popup-backdrop {
@@ -953,7 +958,7 @@ body {
   flex-direction: column;
   gap: 64px;
   padding: 32px 24px;
-  border: 1px solid var(--tag);
+  border: 1px solid var(--rule);
   background: #fff;
 }
 
@@ -1090,7 +1095,7 @@ body {
   margin-top: 120px;
   width: 100%;
   max-width: var(--max-content);
-  border: 1px solid var(--tag);
+  border: 1px solid var(--rule);
   padding: 32px;
   display: flex;
   flex-direction: column;
