@@ -1063,6 +1063,8 @@ body {
 }
 
 /* ─── Client logos ───────────────────────────────────────── */
+.logos-mobile { display: none; }
+
 .client-logos {
   margin-top: 120px;
   max-width: var(--max-content);
@@ -1166,20 +1168,13 @@ body {
   .bfw-header { gap: 0; }
   .bfw-name { font-size: 16px; line-height: 22px; }
 
-  .client-logos {
+  .client-logos { display: none; }
+  .logos-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
     margin-top: 64px;
-    padding: 24px 48px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 29px 32px;
   }
-  .client-logos-row { display: contents; }
-  .client-logos img { height: 32px; width: auto; }
-  .client-logos img.logo-tesco   { width: 45px;  height: 13px; }
-  .client-logos img.logo-hcltech { width: 43px;  height: 32px; }
-  .client-logos img.logo-dlg     { width: 43px;  height: 18px; }
 
   .badge-new {
     display: inline-flex;
