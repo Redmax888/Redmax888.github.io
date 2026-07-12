@@ -89,6 +89,8 @@ body {
   transition: color 0.15s ease;
 }
 .cs-nav-link:hover { color: #444444; }
+.cs-nav-link[data-letstalk] { color: #2F80ED; text-decoration: none; }
+.cs-nav-link[data-letstalk]:hover { color: #1a6cd4; }
 
 /* ─── Hero bottom ────────────────────────────────────────── */
 .cs-hero-bottom {
@@ -265,6 +267,8 @@ body {
   gap: 24px;
 }
 .sticky-bar-link:hover { color: #444; }
+.sticky-bar-link[data-letstalk] { color: #2F80ED; text-decoration: none; }
+.sticky-bar-link[data-letstalk]:hover { color: #1a6cd4; }
 
 /* ─── Popup ──────────────────────────────────────────────── */
 .popup-backdrop {
