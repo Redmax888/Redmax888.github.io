@@ -32,6 +32,7 @@ body {
 /* ─── Token aliases ──────────────────────────────────────── */
 :root {
   --serif: 'Canela Text', 'Canela Deck Trial', Georgia, 'Times New Roman', serif;
+  --serif-display: 'Canela Text', 'Canela Deck Trial', 'Canela Text Trial', Georgia, 'Times New Roman', serif;
   --sans:  'Public Sans', system-ui, sans-serif;
   --ui:    'Public Sans', system-ui, sans-serif;
 
@@ -78,6 +79,7 @@ body {
 
 .hero-bio strong {
   font-weight: 700;
+  font-family: var(--serif-display);
 }
 
 /* Nav row */
@@ -281,7 +283,7 @@ body {
 }
 
 .cs-title {
-  font-family: var(--serif);
+  font-family: var(--serif-display);
   font-size: clamp(22px, 2.78vw, 40px);
   line-height: 1.35;
   font-weight: 700;
@@ -523,7 +525,7 @@ body {
   .sticky-bar-inner { padding: 0 10px; }
 
   /* ── Hero ── */
-  .hero-bio { font-size: clamp(26px, 8vw, 36px); line-height: 42px; }
+  .hero-bio { font-size: 34px; line-height: 46px; }
 
   /* Nav: remove shared border; each child row owns its own */
   .hero-nav {
@@ -592,8 +594,8 @@ body {
 
   .case-study { align-items: stretch; gap: 24px; }
 
-  .cs-title { font-size: clamp(26px, 8vw, 36px); line-height: 42px; max-width: none; }
-  .cs-desc { line-height: 26px; }
+  .cs-title { font-size: 24px; line-height: 34px; max-width: none; }
+  .cs-desc { font-size: 16px; line-height: 22px; }
 
   /* Tags: plain colour fills, rounded right corners, no SVG background */
   .cs-tags { gap: 10px; }
@@ -602,8 +604,15 @@ body {
     background-image: none;
     background-color: var(--tag);
     border-radius: 0 4px 0 4px;
+    height: 33px;
     padding: 0 10px;
   }
+
+  /* ── All design work ── */
+  .work-title { font-size: 16px; line-height: 22px; font-weight: 400; }
+  .work-thumb { height: 148px; }
+  .work-thumb--sm { width: 222px; }
+  .work-thumb--md { width: 296px; }
 
   /* ── Footer ── */
   /* Avatar stays 120×120 (same as desktop — Figma Frame 1321319497: 120×120) */
@@ -893,7 +902,7 @@ body {
 }
 
 .built-for-heading {
-  font-family: var(--serif);
+  font-family: var(--serif-display);
   font-size: clamp(28px, 2.78vw, 40px);
   line-height: 1.35;
   font-weight: 700;
@@ -1065,7 +1074,7 @@ body {
 }
 
 .work-with-me-title {
-  font-family: var(--serif);
+  font-family: var(--serif-display);
   font-size: clamp(28px, 2.78vw, 40px);
   line-height: 1.35;
   font-weight: 700;
@@ -1119,28 +1128,23 @@ body {
 
   .client-logos {
     margin-top: 64px;
-    padding: 24px 48px;
-    gap: 48px;
+    padding: 24px 20px;
+    gap: 32px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .client-logos-row {
     display: flex;
     align-items: center;
-    gap: 48px;
-    width: 100%;
+    justify-content: center;
+    gap: 40px;
   }
-  .client-logos-row:first-child { justify-content: center; }
-  .logo-sq { width: 32px; height: 32px; }
-  .logo-inner--bms     { left: 4px;   top: 10.5px; width: 25.5px; height: 10px; }
-  .logo-inner--hcltech { left: 2.5px; top: 13.5px; width: 27px;   height: 5px; }
-  .logo-inner--pearson { left: 2.5px; top: 13.5px; width: 27px;   height: 5.5px; }
-  .logo-imoney   { width: 43px; height: 32px; }
-  .logo-deutsche { width: 32px; height: 32px; }
-  .logo-tesco    { width: 45px; height: 12px; }
-  .logo-dlg      { width: 43px; height: 18px; }
+  .client-logos-row img { width: 48px; height: 48px; }
+  .logo-imoney { width: 44px; height: 48px; }
+  .logo-tesco  { width: 90px; height: 25px; }
+  .logo-dlg    { width: 90px; height: 38px; }
 
   .work-with-me { margin-top: 48px; padding: 24px 16px; gap: 16px; border-color: var(--tag); }
   .work-with-me-title { font-size: 24px; line-height: 34px; }
