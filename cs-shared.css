@@ -591,7 +591,7 @@ body {
     background-color: transparent;
     border-radius: 0;
     height: 33px;
-    padding: 0 14px;
+    padding: 0 18px;
   }
   .tag--primary {
     background-image: url('assets/tag-mobile.svg');
