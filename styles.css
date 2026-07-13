@@ -330,7 +330,6 @@ body {
 .cs-tags {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-wrap: wrap;
   list-style: none;
 }
