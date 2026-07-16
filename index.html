@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maxim Latanovschii — Designer</title>
+  <link rel="canonical" href="https://maximlats.com/">
   <meta name="description" content="Product designer focused on systems and experiences for complex, data-heavy domains. Based in London, UK.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap"></noscript>
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -31,6 +33,7 @@
          HERO
     ══════════════════════════════════════ -->
     <section class="hero" aria-label="Introduction">
+      <h1 class="sr-only">Maxim Latanovschii</h1>
 
       <div class="hero-body">
 
@@ -115,16 +118,18 @@
 
       <!-- ── BMS Smarter Binding ──────────────── -->
       <article class="case-study" aria-labelledby="cs1-title">
-        <a class="cs-link-overlay" href="BMS case study/index.html" aria-label="Open BMS case study"></a>
+        <a class="cs-link-overlay" href="bms-case-study/index.html" aria-label="Open BMS case study"></a>
 
         <div class="cs-visual" style="background: #FFFFFF;">
           <picture>
+            <source type="image/avif" srcset="assets/bms-brokers-800.avif 800w, assets/bms-brokers.avif 1400w" sizes="(max-width: 800px) 100vw, min(100vw, 1400px)">
+            <source type="image/avif" media="(max-width: 600px)" srcset="assets/bms-mobile.avif">
             <source media="(max-width: 600px)" srcset="assets/bms-mobile.png">
             <img
               src="assets/bms-brokers.png"
               srcset="assets/bms-brokers.png 1x, assets/bms-brokers2x.png 2x"
               alt="BMS smarter binding portal for brokers"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
           </picture>
         </div>
@@ -132,7 +137,7 @@
         <div class="cs-info">
           <div class="cs-top">
           <header class="cs-heading">
-            <h2 class="cs-title" id="cs1-title"><a href="BMS case study/index.html">BMS, smarter binding for brokers</a><span class="badge-new" aria-label="New project"><svg width="50" height="44" viewBox="0 0 50 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 23.9365L10.0317 23.9365V39.9873C10.0317 42.2035 8.23518 44 6.01904 44L0 44V23.9365Z" fill="#B29A00"/><path d="M0 17.0417L46.191 0.229533C48.2735 -0.528435 49.9617 0.653655 49.9617 2.8698L49.9617 21.0688C49.9617 23.285 48.2735 25.696 46.191 26.4539L0 43.2661L0 17.0417Z" fill="#FFE747"/><path d="M7.19731 32.5287V32.4926C7.53668 31.3759 7.72333 30.4954 7.72333 28.7439V27.0284C7.72333 25.4936 7.43487 24.7318 6.6713 24.143V24.1069L10.4043 21.6467V23.5608L10.4891 23.5479C10.9642 22.5444 12.0163 21.1503 13.5943 20.5759C15.2232 19.983 16.2583 20.6356 16.2583 22.2788V25.6374C16.2583 27.3528 16.411 28.1459 16.7504 29.0155V29.0516L13.0004 30.4165V30.3804C13.3398 29.2637 13.4925 28.3414 13.4925 26.6802V23.7007C13.4925 22.9243 13.1192 22.4823 12.2199 22.8096C11.4903 23.0752 10.8624 23.701 10.4891 24.3966V27.7552C10.4891 29.4346 10.6418 30.2457 10.9642 31.1215V31.1576L7.19731 32.5287ZM23.6121 24.604C24.5963 24.2458 25.2411 23.6861 25.801 22.9225L26.0046 22.9929C25.4956 24.9477 24.1551 26.6455 22.1189 27.3866C19.4889 28.3438 17.8769 26.8901 17.8769 24.1454C17.8769 21.1299 19.7773 18.3255 22.2716 17.4176C24.7999 16.4974 26.1064 18.261 26.0216 20.4767L20.7106 22.4098C20.8972 24.7435 22.085 25.1598 23.6121 24.604ZM22.2377 18.1342C21.2875 18.4801 20.6936 20.1047 20.6936 21.6756L23.3576 20.6338V19.9115C23.3576 18.3766 22.9164 17.8872 22.2377 18.1342ZM38.8861 14.6027L36.4427 22.0106L35.4755 22.3627L33.2696 17.008L30.9111 24.024L29.9269 24.3822L27.6362 18.6792C27.0423 17.2161 26.7369 16.6953 26.2788 16.3022V16.2481L30.5887 14.6794V14.7336C30.2154 15.357 30.1305 16.5435 30.5378 17.569L31.5559 20.1959L32.9133 16.1627C32.4212 14.9694 32.2007 14.5622 31.8274 14.2827V14.2285L36.0524 12.6907V12.7449C35.73 13.2956 35.6112 14.5487 36.0185 15.5742L37.0875 18.1465L38.0377 15.2546C38.6316 13.4855 38.2413 12.3816 37.7492 12.1273V12.0732L40.515 11.0665V11.1207C39.8872 12.0714 39.5139 12.749 38.8861 14.6027Z" fill="black"/></svg></span></h2>
+            <h2 class="cs-title" id="cs1-title"><a href="bms-case-study/index.html">BMS, smarter binding for brokers</a><span class="badge-new" aria-label="New project"><svg width="50" height="44" viewBox="0 0 50 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 23.9365L10.0317 23.9365V39.9873C10.0317 42.2035 8.23518 44 6.01904 44L0 44V23.9365Z" fill="#B29A00"/><path d="M0 17.0417L46.191 0.229533C48.2735 -0.528435 49.9617 0.653655 49.9617 2.8698L49.9617 21.0688C49.9617 23.285 48.2735 25.696 46.191 26.4539L0 43.2661L0 17.0417Z" fill="#FFE747"/><path d="M7.19731 32.5287V32.4926C7.53668 31.3759 7.72333 30.4954 7.72333 28.7439V27.0284C7.72333 25.4936 7.43487 24.7318 6.6713 24.143V24.1069L10.4043 21.6467V23.5608L10.4891 23.5479C10.9642 22.5444 12.0163 21.1503 13.5943 20.5759C15.2232 19.983 16.2583 20.6356 16.2583 22.2788V25.6374C16.2583 27.3528 16.411 28.1459 16.7504 29.0155V29.0516L13.0004 30.4165V30.3804C13.3398 29.2637 13.4925 28.3414 13.4925 26.6802V23.7007C13.4925 22.9243 13.1192 22.4823 12.2199 22.8096C11.4903 23.0752 10.8624 23.701 10.4891 24.3966V27.7552C10.4891 29.4346 10.6418 30.2457 10.9642 31.1215V31.1576L7.19731 32.5287ZM23.6121 24.604C24.5963 24.2458 25.2411 23.6861 25.801 22.9225L26.0046 22.9929C25.4956 24.9477 24.1551 26.6455 22.1189 27.3866C19.4889 28.3438 17.8769 26.8901 17.8769 24.1454C17.8769 21.1299 19.7773 18.3255 22.2716 17.4176C24.7999 16.4974 26.1064 18.261 26.0216 20.4767L20.7106 22.4098C20.8972 24.7435 22.085 25.1598 23.6121 24.604ZM22.2377 18.1342C21.2875 18.4801 20.6936 20.1047 20.6936 21.6756L23.3576 20.6338V19.9115C23.3576 18.3766 22.9164 17.8872 22.2377 18.1342ZM38.8861 14.6027L36.4427 22.0106L35.4755 22.3627L33.2696 17.008L30.9111 24.024L29.9269 24.3822L27.6362 18.6792C27.0423 17.2161 26.7369 16.6953 26.2788 16.3022V16.2481L30.5887 14.6794V14.7336C30.2154 15.357 30.1305 16.5435 30.5378 17.569L31.5559 20.1959L32.9133 16.1627C32.4212 14.9694 32.2007 14.5622 31.8274 14.2827V14.2285L36.0524 12.6907V12.7449C35.73 13.2956 35.6112 14.5487 36.0185 15.5742L37.0875 18.1465L38.0377 15.2546C38.6316 13.4855 38.2413 12.3816 37.7492 12.1273V12.0732L40.515 11.0665V11.1207C39.8872 12.0714 39.5139 12.749 38.8861 14.6027Z" fill="black"/></svg></span></h2>
           </header>
           <ul class="cs-tags" aria-label="Project categories">
             <li class="tag tag--primary">Insurance</li>
@@ -152,25 +157,28 @@
 
       <!-- ── Tesco ────────────────────────────── -->
       <article class="case-study" aria-labelledby="cs2-title">
-        <a class="cs-link-overlay" href="Tesco case study/index.html" aria-label="Open Tesco case study"></a>
+        <a class="cs-link-overlay" href="tesco-case-study/index.html" aria-label="Open Tesco case study"></a>
 
         <div class="cs-visual" style="background: #213752;">
           <video class="cs-video-bg" autoplay muted loop playsinline>
             <source src="assets/video.mp4" type="video/mp4">
           </video>
           <div class="cs-video-overlay"></div>
+          <picture>
+          <source type="image/avif" srcset="assets/tesco-phone.avif">
           <img
             class="cs-phone-ui"
             src="assets/tesco-phone.png"
             alt=""
-            aria-hidden="true"
+            aria-hidden="true" loading="lazy"
           >
+        </picture>
         </div>
 
         <div class="cs-info">
           <div class="cs-top">
           <header class="cs-heading">
-            <h2 class="cs-title" id="cs2-title"><a href="Tesco case study/index.html">Tesco, delivery driver experience</a></h2>
+            <h2 class="cs-title" id="cs2-title"><a href="tesco-case-study/index.html">Tesco, delivery driver experience</a></h2>
           </header>
           <ul class="cs-tags" aria-label="Project categories">
             <li class="tag tag--primary">Retail &amp; logistics</li>
@@ -190,21 +198,24 @@
 
       <!-- ── Direct Line Group ───────────────── -->
       <article class="case-study" aria-labelledby="cs3-title">
-        <a class="cs-link-overlay" href="Direct Line case study/index.html" aria-label="Open Direct Line Group case study"></a>
+        <a class="cs-link-overlay" href="direct-line-case-study/index.html" aria-label="Open Direct Line Group case study"></a>
 
         <div class="cs-visual" style="background: #FFFFFF;">
+          <picture>
+          <source type="image/avif" srcset="assets/direct-line-800.avif 800w, assets/direct-line.avif 1400w" sizes="(max-width: 800px) 100vw, min(100vw, 1400px)">
           <img
             src="assets/direct-line.png"
             srcset="assets/direct-line.png 1x, assets/direct-line2x.png 2x"
             alt="Direct Line Group policy management experience"
-            onerror="this.style.display='none'"
+            onerror="this.style.display='none'" loading="lazy"
           >
+        </picture>
         </div>
 
         <div class="cs-info">
           <div class="cs-top">
           <header class="cs-heading">
-            <h2 class="cs-title" id="cs3-title"><a href="Direct Line case study/index.html">Direct Line Group, policy management experience</a></h2>
+            <h2 class="cs-title" id="cs3-title"><a href="direct-line-case-study/index.html">Direct Line Group, policy management experience</a></h2>
           </header>
           <ul class="cs-tags" aria-label="Project categories">
             <li class="tag tag--primary">Insurance</li>
@@ -232,74 +243,92 @@
 
       <div class="all-works-grid">
 
-        <a href="UBS case study/index.html" class="work-card">
+        <a href="ubs-case-study/index.html" class="work-card">
           <div class="work-thumb work-thumb--sm">
-            <img
+            <picture>
+          <source type="image/avif" srcset="assets/thumb-ubs.avif">
+          <img
               src="assets/thumb-ubs.png"
               srcset="assets/thumb-ubs.png 1x, assets/thumb-ubs2x.png 2x"
               alt="UBS TechView project"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
+        </picture>
           </div>
           <p class="work-title">UBS, TechView</p>
         </a>
 
-        <a href="Pearson case study/index.html" class="work-card">
+        <a href="pearson-case-study/index.html" class="work-card">
           <div class="work-thumb work-thumb--md">
-            <img
+            <picture>
+          <source type="image/avif" srcset="assets/thumb-pearson.avif">
+          <img
               src="assets/thumb-pearson.png"
               srcset="assets/thumb-pearson.png 1x, assets/thumb-pearson2x.png 2x"
               alt="Pearson 360 project"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
+        </picture>
           </div>
           <p class="work-title">Pearson, 360</p>
         </a>
 
         <div class="work-card work-card--disabled">
           <div class="work-thumb work-thumb--md">
-            <img
+            <picture>
+          <source type="image/avif" srcset="assets/deutsche-bank-cover.avif">
+          <img
               src="assets/deutsche-bank-cover.png"
               srcset="assets/deutsche-bank-cover.png 1x, assets/deutsche-bank-cover.png 2x"
               alt="Deutsche Bank Craft project — coming soon"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
+        </picture>
           </div>
           <p class="work-title work-title--muted">Deutsche Bank, (coming soon)</p>
         </div>
 
-        <a href="iMoney case study/index.html" class="work-card">
+        <a href="imoney-case-study/index.html" class="work-card">
           <div class="work-thumb work-thumb--sm">
-            <img
+            <picture>
+          <source type="image/avif" srcset="assets/thumb-imoney.avif">
+          <img
               src="assets/thumb-imoney.png"
               srcset="assets/thumb-imoney.png 1x, assets/thumb-imoney2x.png 2x"
               alt="iMoney Deposits landing"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
+        </picture>
           </div>
           <p class="work-title">iMoney, Deposits landing</p>
         </a>
 
-        <a href="Red Ice Racing case study/index.html" class="work-card">
+        <a href="red-ice-racing-case-study/index.html" class="work-card">
           <div class="work-thumb work-thumb--md">
-            <img
+            <picture>
+          <source type="image/avif" srcset="assets/thumb-redice.avif">
+          <img
               src="assets/thumb-redice.png"
               srcset="assets/thumb-redice.png 1x, assets/thumb-redice2x.png 2x"
               alt="Red Ice Racing blog"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
+        </picture>
           </div>
           <p class="work-title">Red Ice Racing, blog</p>
         </a>
 
-        <a href="Grocery app case study/index.html" class="work-card">
+        <a href="grocery-app-case-study/index.html" class="work-card">
           <div class="work-thumb work-thumb--xs">
-            <img
+            <picture>
+          <source type="image/avif" srcset="assets/thumb-grocery.avif">
+          <img
               src="assets/thumb-grocery.png"
               srcset="assets/thumb-grocery.png 1x, assets/thumb-grocery2x.png 2x"
               alt="Grocery app"
-              onerror="this.style.display='none'"
+              onerror="this.style.display='none'" loading="lazy"
             >
+        </picture>
           </div>
           <p class="work-title">Grocery app</p>
         </a>
@@ -325,7 +354,10 @@
           <div class="bfw-quote-box">
             <blockquote class="bfw-quote">"A holistic approach to experience design, always advocating for the end user, staying practical about product delivery, and elevating our work."</blockquote>
             <div class="bfw-meta">
-              <img class="bfw-avatar" src="assets/testimonial-raju.jpg" alt="Raju Radhakrishnan">
+              <picture>
+          <source type="image/avif" srcset="assets/testimonial-raju.avif">
+          <img class="bfw-avatar" src="assets/testimonial-raju.jpg" alt="Raju Radhakrishnan" loading="lazy">
+        </picture>
               <div class="bfw-name-group">
                 <div class="bfw-name-row">
                   <span class="bfw-name">Raju Radhakrishnan</span>
@@ -345,7 +377,10 @@
           <div class="bfw-quote-box">
             <blockquote class="bfw-quote">"Rare to find such a well-rounded, research-driven designer. Max solved the real problem, not just the UI, solutions genuinely fit for purpose."</blockquote>
             <div class="bfw-meta">
-              <img class="bfw-avatar" src="assets/testimonial-vy.jpg" alt="Vy Alechnavicius">
+              <picture>
+          <source type="image/avif" srcset="assets/testimonial-vy.avif">
+          <img class="bfw-avatar" src="assets/testimonial-vy.jpg" alt="Vy Alechnavicius" loading="lazy">
+        </picture>
               <div class="bfw-name-group">
                 <div class="bfw-name-row">
                   <span class="bfw-name">Vy Alechnavicius</span>
@@ -365,7 +400,10 @@
           <div class="bfw-quote-box">
             <blockquote class="bfw-quote">"His work was first class, from user interviews and design sprints to applying NatWest's global branding across a polished set of UI designs and prototypes."</blockquote>
             <div class="bfw-meta">
-              <img class="bfw-avatar" src="assets/testimonial-jason.jpg" alt="Jason Bocchi">
+              <picture>
+          <source type="image/avif" srcset="assets/testimonial-jason.avif">
+          <img class="bfw-avatar" src="assets/testimonial-jason.jpg" alt="Jason Bocchi" loading="lazy">
+        </picture>
               <div class="bfw-name-group">
                 <div class="bfw-name-row">
                   <span class="bfw-name">Jason Bocchi</span>
@@ -383,18 +421,18 @@
     <!-- ══════════════════════════════════════
          CLIENT LOGOS
     ══════════════════════════════════════ -->
-    <img class="logos-mobile" src="assets/logos-mobile.svg" alt="" aria-hidden="true">
+    <img class="logos-mobile" src="assets/logos-mobile.svg" alt="" aria-hidden="true" loading="lazy">
     <div class="client-logos" aria-hidden="true">
       <div class="client-logos-row">
-        <img src="assets/logo-bms.svg" alt="" width="64" height="64">
-        <img src="assets/logo-imoney.svg" alt="" class="logo-imoney" width="58" height="64">
-        <img src="assets/logo-deutsche.svg" alt="" width="64" height="64">
-        <img src="assets/logo-tesco.svg" alt="" class="logo-tesco" width="90" height="25">
+        <img src="assets/logo-bms.svg" alt="" width="64" height="64" loading="lazy">
+        <img src="assets/logo-imoney.svg" alt="" class="logo-imoney" width="58" height="64" loading="lazy">
+        <img src="assets/logo-deutsche.svg" alt="" width="64" height="64" loading="lazy">
+        <img src="assets/logo-tesco.svg" alt="" class="logo-tesco" width="90" height="25" loading="lazy">
       </div>
       <div class="client-logos-row">
-        <img src="assets/logo-hcltech.svg" alt="" class="logo-hcltech" width="64" height="64">
-        <img src="assets/logo-dlg.svg" alt="" class="logo-dlg" width="90" height="38">
-        <img src="assets/logo-pearson.svg" alt="" width="64" height="64">
+        <img src="assets/logo-hcltech.svg" alt="" class="logo-hcltech" width="64" height="64" loading="lazy">
+        <img src="assets/logo-dlg.svg" alt="" class="logo-dlg" width="90" height="38" loading="lazy">
+        <img src="assets/logo-pearson.svg" alt="" width="64" height="64" loading="lazy">
       </div>
     </div>
 
@@ -416,12 +454,15 @@
 
       <div class="footer-credit">
         <div class="footer-avatar">
+          <picture>
+          <source type="image/avif" srcset="assets/footer-avatar.avif">
           <img
             src="assets/footer-avatar.png"
             srcset="assets/footer-avatar.png 1x, assets/footer-avatar.png 2x"
             alt="Maxim Latanovschii"
-            onerror="this.style.display='none'"
+            onerror="this.style.display='none'" loading="lazy"
           >
+        </picture>
         </div>
         <div class="footer-credit-info">
           <p>Maxim Latanovschii</p>
@@ -466,7 +507,7 @@
 <div class="cs-copy-toast" id="sentToast" aria-live="polite" aria-atomic="true">Message sent. I'll reply soon.</div>
 
 <div class="popup-backdrop" id="letsTalkBackdrop" aria-hidden="true">
-  <div class="popup" id="letsTalkPopup" role="dialog" aria-labelledby="popupTitle" aria-modal="false">
+  <div class="popup" id="letsTalkPopup" role="dialog" aria-labelledby="popupTitle" aria-modal="true">
     <div class="popup-top">
       <div class="popup-hgroup">
         <div class="popup-header">
@@ -505,9 +546,14 @@
   var textarea = document.getElementById('popupTextarea');
   var emailInput = document.getElementById('popupEmail');
 
+  var openerEl = null;
+  var focusableEls = [closeBtn, emailInput, textarea, sendBtn];
+
   function openPopup() {
+    openerEl = document.activeElement;
     backdrop.classList.add('popup-backdrop--visible');
     backdrop.removeAttribute('aria-hidden');
+    closeBtn.focus();
   }
   function closePopup() {
     backdrop.classList.remove('popup-backdrop--visible');
@@ -515,6 +561,7 @@
     textarea.value = '';
     emailInput.value = '';
     clearErrors();
+    if (openerEl) { openerEl.focus(); openerEl = null; }
   }
 
   document.querySelectorAll('[data-letstalk]').forEach(function(el) {
@@ -524,6 +571,17 @@
   backdrop.addEventListener('click', function(e) { if (e.target === backdrop) closePopup(); });
   closeBtn.addEventListener('click', closePopup);
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePopup(); });
+
+  document.getElementById('letsTalkPopup').addEventListener('keydown', function(e) {
+    if (e.key !== 'Tab') return;
+    var first = focusableEls[0];
+    var last  = focusableEls[focusableEls.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  });
 
   function clearErrors() {
     emailInput.classList.remove('popup-input--error');
@@ -658,9 +716,9 @@
     el.addEventListener('mouseleave', function () { cur.classList.remove('custom-cursor--large'); });
   });
   (function tick() {
-    cx += (mx - cx) * 0.12;
-    cy += (my - cy) * 0.12;
-    cur.style.transform = 'translate(' + cx + 'px, ' + cy + 'px)';
+    cx += (mx - cx) * 0.22;
+    cy += (my - cy) * 0.22;
+    cur.style.transform = 'translate3d(' + cx + 'px, ' + cy + 'px, 0)';
     requestAnimationFrame(tick);
   }());
 }());
