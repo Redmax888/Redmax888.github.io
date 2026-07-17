@@ -172,6 +172,7 @@
 
 @media (max-width: 600px) {
   .cs-nav { margin-bottom: 32px; }
+  .cs-body { font-size: 16px; line-height: 22px; }
 }
 
 /* ─── Sticky bar ─────────────────────────────────────────── */

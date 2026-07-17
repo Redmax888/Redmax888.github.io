@@ -274,7 +274,12 @@
 }
 
 @media (max-width: 600px) {
-  .cs-body { line-height: 26px; }
+  .cs-body { font-size: 16px; line-height: 22px; }
+  .cs-body-center { font-size: 16px; line-height: 22px; }
+  .cs-list { font-size: 16px; line-height: 22px; }
+  .cs-h3-center { font-size: 16px; line-height: 24px; }
+  .cs-objective { margin-top: 36px; padding: 16px 0; }
+  .cs-problem { padding-bottom: 32px; }
 }
 
 /* ─── Sticky scroll bar ──────────────────────────────────── */

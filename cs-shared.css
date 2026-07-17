@@ -609,7 +609,7 @@ body {
 @media (max-width: 600px) {
   :root { --px: 10px; }
   .sticky-bar-inner { padding: 0 10px; }
-  .cs-intro { line-height: 26px; }
+  .cs-intro { font-size: 16px; line-height: 22px; }
   .popup-backdrop {
     align-items: flex-start;
     padding: 16px;
