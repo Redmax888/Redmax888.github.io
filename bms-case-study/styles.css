@@ -61,7 +61,7 @@
 
 .badge-new {
   display: inline-flex;
-  vertical-align: bottom;
+  vertical-align: top;
   margin-left: 10px;
   flex-shrink: 0;
   line-height: 0;
