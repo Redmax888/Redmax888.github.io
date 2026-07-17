@@ -97,7 +97,7 @@ body {
 .cs-body {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 26px;
+  line-height: 27px;
   font-weight: 400;
   color: var(--body);
 }
