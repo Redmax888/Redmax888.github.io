@@ -1177,6 +1177,7 @@ body {
   .built-for { padding-top: 64px; }
   .built-for-heading { font-size: 24px; line-height: 34px; }
   .bfw-card { padding: 16px; }
+  .bfw-category { font-size: 16px; line-height: 24px; }
   .bfw-desc { font-size: 16px; line-height: 22px; }
   .bfw-quote-box { gap: 24px; }
   .bfw-header { gap: 0; }
