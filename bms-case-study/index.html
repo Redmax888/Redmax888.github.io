@@ -285,7 +285,9 @@
         <video
           id="wf1-video"
           src="assets/quotation-form-loop.mp4"
+          autoplay
           muted
+          loop
           playsinline
           preload="none"
           aria-label="Quote details form — the dense single-screen quotation workflow for brokers"
@@ -613,13 +615,12 @@
     (function () {
       var v = document.getElementById('wf1-video');
       if (!v) return;
-      v.addEventListener('canplay', function handler() {
-        v.removeEventListener('canplay', handler);
-        setTimeout(function () { v.play(); }, 1000);
-      });
-      v.addEventListener('ended', function () {
-        setTimeout(function () { v.currentTime = 0; v.play(); }, 3000);
-      });
+      new IntersectionObserver(function (entries, obs) {
+        if (!entries[0].isIntersecting) return;
+        v.load();
+        v.play().catch(function () {});
+        obs.unobserve(v);
+      }, { threshold: 0.2 }).observe(v);
     })();
   </script>
 
