@@ -246,6 +246,12 @@ body {
   position: relative;
 }
 
+.cs-visual picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .cs-visual img {
   width: 100%;
   height: 100%;

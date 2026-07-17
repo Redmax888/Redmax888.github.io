@@ -105,6 +105,19 @@
   image-rendering: -webkit-optimize-contrast;
 }
 
+/* picture wrapper becomes the flex child — apply the same constraints */
+.cs-image-pair picture {
+  flex: 1 1 0;
+  min-width: 0;
+  display: block;
+}
+
+.cs-image-pair picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ─── Project details ────────────────────────────────────── */
 .cs-project-details {
   max-width: var(--max);
