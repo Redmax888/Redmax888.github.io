@@ -57,19 +57,20 @@
   line-height: 1.25;
   font-weight: 700;
   color: var(--black);
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
 }
 
 .badge-new {
-  display: inline-flex;
-  vertical-align: baseline;
-  margin-left: 10px;
   flex-shrink: 0;
   line-height: 0;
-  height: 1.1em;
+  height: 1.5em;
 }
 .badge-new svg {
   height: 100%;
   width: auto;
+  display: block;
 }
 
 /* ─── Product visual ─────────────────────────────────────── */
@@ -582,6 +583,7 @@
 }
 
 @media (max-width: 600px) {
+  .cs-title { display: block; }
   .badge-new {
     display: inline-flex;
     align-items: center;
