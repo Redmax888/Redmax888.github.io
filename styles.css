@@ -576,6 +576,7 @@ body {
   .sticky-bar-inner { padding: 0 10px; }
 
   /* ── Hero ── */
+  .hero-body { gap: 36px; }
   .hero-bio { font-size: 32px; line-height: 44px; }
 
   /* Nav: remove shared border; each child row owns its own */
