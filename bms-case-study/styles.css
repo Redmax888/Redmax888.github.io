@@ -61,12 +61,10 @@
 
 .badge-new {
   display: inline-flex;
-  vertical-align: top;
+  vertical-align: bottom;
   margin-left: 10px;
   flex-shrink: 0;
   line-height: 0;
-  position: relative;
-  top: -4px;
 }
 
 /* ─── Product visual ─────────────────────────────────────── */
