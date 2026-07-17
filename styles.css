@@ -998,7 +998,7 @@ body {
 .bfw-desc {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 27px;
+  line-height: 25px;
   font-weight: 400;
   color: var(--body);
 }
@@ -1051,7 +1051,7 @@ body {
 .bfw-name {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 27px;
+  line-height: 25px;
   font-weight: 400;
   color: var(--black);
   white-space: nowrap;
