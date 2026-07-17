@@ -63,6 +63,7 @@
   display: inline-flex;
   vertical-align: top;
   margin-left: 10px;
+  margin-top: -4px;
   flex-shrink: 0;
   line-height: 0;
 }
