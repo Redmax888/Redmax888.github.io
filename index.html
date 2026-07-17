@@ -121,11 +121,14 @@
         <a class="cs-link-overlay" href="bms-case-study/index.html" aria-label="Open BMS case study"></a>
 
         <div class="cs-visual" style="background: #FFFFFF;">
-          <img
-            src="assets/bms-hero-1x.png"
-            srcset="assets/bms-hero-1x.png 1x, assets/bms-hero.png 2x"
-            alt="BMS smarter binding portal for brokers"
-          >
+          <picture>
+            <source media="(max-width: 600px)" srcset="assets/bms-hero-1x.png 1x, assets/bms-hero.png 2x">
+            <img
+              src="assets/bms-hero-desktop-1x.png"
+              srcset="assets/bms-hero-desktop-1x.png 1x, assets/bms-hero-desktop.png 2x"
+              alt="BMS smarter binding portal for brokers"
+            >
+          </picture>
         </div>
 
         <div class="cs-info">
