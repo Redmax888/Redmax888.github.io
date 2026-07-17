@@ -71,30 +71,14 @@
   margin-top: 64px;
 }
 
-/* ─── H2 section heading ──────────────────────────────────── */
-.cs-h2 {
-  font-family: var(--serif-text);
-  font-size: clamp(28px, 2.86vw, 40px);
-  line-height: 1.35;
-  font-weight: 700;
-  color: var(--black);
-  max-width: 940px;
-}
-
-/* ─── Body text ───────────────────────────────────────────── */
-.cs-body {
-  font-family: var(--ui);
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  color: var(--body);
-  max-width: 940px;
-}
+/* ─── H2 / body max-width overrides ──────────────────────── */
+.cs-h2  { max-width: 940px; }
+.cs-body { max-width: 940px; }
 
 .cs-list {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 400;
   color: var(--body);
   max-width: 927px;
@@ -158,7 +142,7 @@
 .cs-body-center {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 400;
   color: var(--body);
   max-width: 728px;
@@ -274,7 +258,6 @@
 }
 
 @media (max-width: 600px) {
-  .cs-body { font-size: 16px; line-height: 22px; }
   .cs-body-center { font-size: 16px; line-height: 22px; }
   .cs-list { font-size: 16px; line-height: 22px; }
   .cs-h3-center { font-size: 16px; line-height: 24px; }

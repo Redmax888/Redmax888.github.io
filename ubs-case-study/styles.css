@@ -100,16 +100,6 @@
   color: var(--black);
 }
 
-.cs-body {
-  font-family: var(--ui);
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  color: var(--body);
-}
-
-.cs-body + .cs-body { margin-top: 10px; }
-
 /* ─── Full-width image ───────────────────────────────────── */
 .cs-full-img {
   width: 100%;
@@ -162,7 +152,6 @@
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 720px) {
   .cs-title { font-size: 34px; line-height: 48px; }
-  .cs-body { line-height: 26px; }
   .cs-sep { padding-top: 48px; }
   .cs-h2 { font-size: 28px; }
   .cs-sketch-grid__row--3 { grid-template-columns: 1fr; }
@@ -172,7 +161,6 @@
 
 @media (max-width: 600px) {
   .cs-nav { margin-bottom: 32px; }
-  .cs-body { font-size: 16px; line-height: 22px; }
 }
 
 /* ─── Sticky bar ─────────────────────────────────────────── */

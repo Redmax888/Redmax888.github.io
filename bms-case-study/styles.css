@@ -209,14 +209,6 @@
 }
 
 /* ─── Typography ─────────────────────────────────────────── */
-.cs-h2 {
-  font-family: var(--serif-text);
-  font-size: clamp(28px, 2.86vw, 40px);
-  line-height: 1.35;
-  font-weight: 700;
-  color: var(--black);
-}
-
 .cs-h3 {
   font-family: var(--sans);
   font-size: 18px;
@@ -246,16 +238,6 @@
 .cs-section[aria-labelledby="bet-heading"] .cs-section-inner:not(.cs-section-inner--mb) {
   gap: 32px;
 }
-
-.cs-body {
-  font-family: var(--ui);
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  color: var(--body);
-}
-
-.cs-body + .cs-body { margin-top: 10px; }
 
 .cs-body p + p { margin-top: 10px; }
 
@@ -453,7 +435,7 @@
 .cs-shipped-list li {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 400;
   color: var(--body);
 }
@@ -512,7 +494,7 @@
 .cs-ai-list li {
   font-family: var(--ui);
   font-size: 18px;
-  line-height: 30px;
+  line-height: 26px;
   font-weight: 400;
   color: var(--body);
 }
@@ -602,7 +584,6 @@
   }
   .badge-new::before { content: 'new'; }
   .badge-new svg { display: none; }
-  .cs-body { font-size: 16px; line-height: 22px; }
   .cs-body-accent { font-size: 16px; line-height: 22px; }
   .cs-h3 { font-size: 16px; line-height: 24px; }
   .cs-annotation { font-size: 16px; line-height: 22px; }

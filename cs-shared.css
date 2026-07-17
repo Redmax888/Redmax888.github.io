@@ -93,6 +93,30 @@ body {
 .cs-nav-link[data-letstalk] { color: #000000; text-decoration: underline; text-decoration-thickness: 2.5%; text-underline-offset: 15%; text-decoration-color: rgba(0, 0, 0, 0.25); }
 .cs-nav-link[data-letstalk]:hover { color: #444444; text-decoration-color: #000000; }
 
+/* ─── Body text ───────────────────────────────────────────── */
+.cs-body {
+  font-family: var(--ui);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--body);
+}
+
+.cs-body + .cs-body { margin-top: 10px; }
+
+/* ─── Section heading ─────────────────────────────────────── */
+.cs-h2 {
+  font-family: var(--serif-text);
+  font-size: clamp(28px, 2.86vw, 40px);
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--black);
+}
+
+@media (max-width: 600px) {
+  .cs-body { font-size: 16px; line-height: 22px; }
+}
+
 /* ─── Hero bottom ────────────────────────────────────────── */
 .cs-hero-bottom {
   display: flex;
