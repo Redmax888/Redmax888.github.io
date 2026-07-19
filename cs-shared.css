@@ -60,13 +60,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 0;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 2px solid #F2F2F2;
   margin-bottom: 64px;
 }
 
 .cs-nav-identity {
   font-family: var(--sans);
-  font-size: clamp(15px, 1.67vw, 24px);
+  font-size: 18px;
   font-weight: 400;
   color: var(--muted);
   text-decoration: none;
@@ -75,14 +75,14 @@ body {
 .cs-nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 .cs-nav-link {
   font-family: var(--sans);
-  font-size: clamp(15px, 1.67vw, 24px);
+  font-size: 18px;
   font-weight: 400;
-  color: var(--black);
+  color: var(--body);
   text-decoration: underline;
   text-decoration-thickness: 2.5%;
   text-underline-offset: 15%;
@@ -90,7 +90,7 @@ body {
   transition: color 0.15s ease;
 }
 .cs-nav-link:hover { color: #444444; text-decoration-color: #000000; }
-.cs-nav-link[data-letstalk] { color: #000000; text-decoration: underline; text-decoration-thickness: 2.5%; text-underline-offset: 15%; text-decoration-color: rgba(0, 0, 0, 0.25); }
+.cs-nav-link[data-letstalk] { color: var(--body); text-decoration: underline; text-decoration-thickness: 2.5%; text-underline-offset: 15%; text-decoration-color: rgba(0, 0, 0, 0.25); }
 .cs-nav-link[data-letstalk]:hover { color: #444444; text-decoration-color: #000000; }
 
 /* ─── Body text ───────────────────────────────────────────── */

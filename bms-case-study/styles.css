@@ -332,7 +332,7 @@
 }
 
 .cs-metric-divider {
-  width: 2px;
+  width: 1px;
   height: 191px;
   background: var(--rule);
   flex-shrink: 0;
