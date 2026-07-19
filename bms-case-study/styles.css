@@ -310,8 +310,8 @@
   align-items: center;
   max-width: var(--max);
   padding: 40px 0;
-  border-top: 2px solid var(--rule);
-  border-bottom: 2px solid var(--rule);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .cs-metric {
