@@ -63,12 +63,17 @@
       </div>
 
       <div class="cs-hero-img">
-        <img
-          src="assets/dlg-hero-img.png"
-          alt="Direct Line Group policy management interface"
-          width="1400"
-          height="768"
-        >
+        <picture>
+          <source media="(max-width: 600px)" srcset="assets/dlg-hero-img-800.png">
+          <source type="image/avif" media="(min-width: 601px) and (-webkit-max-device-pixel-ratio: 1.5), (min-width: 601px) and (max-resolution: 1.5dppx)" srcset="assets/dlg-hero-img-800.avif 800w, assets/dlg-hero-img.avif 1400w" sizes="(max-width: 800px) 100vw, min(100vw, 1400px)">
+          <img
+            src="assets/dlg-hero-img.png"
+            alt="Direct Line Group policy management interface"
+            width="1400"
+            height="700"
+            srcset="assets/dlg-hero-img.png 1x, assets/dlg-hero-img_2x.png 2x"
+          >
+        </picture>
       </div>
 
       <p class="cs-meta">Role: Senior UX/UI Designer<br>Company: Direct Line Group<br>Timeline: 6 months to design 1 business instance for direct line<br>Status: Live</p>
