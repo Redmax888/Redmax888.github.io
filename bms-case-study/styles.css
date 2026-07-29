@@ -556,7 +556,8 @@
   .cs-metric,
   .cs-metric-group { flex: unset; width: 100%; }
   .cs-metric-val { font-size: 80px; line-height: 80px; }
-  .cs-image-pair { flex-direction: column; gap: 16px; }
+  .cs-image-pair { flex-direction: column; gap: 10px; }
+  .cs-product-visual { margin-bottom: 10px; }
   .cs-image-pair--hero-gap { margin-bottom: 16px; }
   .cs-shipped-row { flex-direction: column; gap: 32px; }
   .cs-ai-row { flex-direction: column; gap: 32px; }
